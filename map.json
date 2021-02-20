@@ -1,0 +1,4495 @@
+{
+    "line10_1": {
+        "color": "Ярко-зелёная",
+        "name": "Селигерская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_2"
+            ]
+        }
+    },
+    "line10_10": {
+        "color": "Ярко-зелёная",
+        "name": "Сретенский бульвар ",
+        "neighbours": {
+            "Change": [
+                "line3_15",
+                "line5_2"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_9",
+                "line10_11"
+            ]
+        }
+    },
+    "line10_11": {
+        "color": "Ярко-зелёная",
+        "name": "Чкаловская ",
+        "neighbours": {
+            "Change": [
+                "line8_6"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_10",
+                "line10_12"
+            ]
+        }
+    },
+    "line10_12": {
+        "color": "Ярко-зелёная",
+        "name": "Римская ",
+        "neighbours": {
+            "Change": [
+                "line7_15",
+                "lineD2_19"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_11",
+                "line10_13"
+            ]
+        }
+    },
+    "line10_13": {
+        "color": "Ярко-зелёная",
+        "name": "Крестьянская Застава ",
+        "neighbours": {
+            "Change": [
+                "line14_10"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_12",
+                "line10_14"
+            ]
+        }
+    },
+    "line10_14": {
+        "color": "Ярко-зелёная",
+        "name": "Дубровка ",
+        "neighbours": {
+            "Change": [
+                "line14_10"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_13",
+                "line10_15"
+            ]
+        }
+    },
+    "line10_15": {
+        "color": "Ярко-зелёная",
+        "name": "Кожуховская ",
+        "neighbours": {
+            "Change": [
+                "lineD2_24"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_14",
+                "line10_16"
+            ]
+        }
+    },
+    "line10_16": {
+        "color": "Ярко-зелёная",
+        "name": "Печатники ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_15",
+                "line10_17"
+            ]
+        }
+    },
+    "line10_17": {
+        "color": "Ярко-зелёная",
+        "name": "Волжская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_16",
+                "line10_18"
+            ]
+        }
+    },
+    "line10_18": {
+        "color": "Ярко-зелёная",
+        "name": "Люблино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_17",
+                "line10_19"
+            ]
+        }
+    },
+    "line10_19": {
+        "color": "Ярко-зелёная",
+        "name": "Братиславская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_18",
+                "line10_20"
+            ]
+        }
+    },
+    "line10_2": {
+        "color": "Ярко-зелёная",
+        "name": "Верхние Лихоборы ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_1",
+                "line10_3"
+            ]
+        }
+    },
+    "line10_20": {
+        "color": "Ярко-зелёная",
+        "name": "Марьино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_19",
+                "line10_21"
+            ]
+        }
+    },
+    "line10_21": {
+        "color": "Ярко-зелёная",
+        "name": "Борисово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_20",
+                "line10_22"
+            ]
+        }
+    },
+    "line10_22": {
+        "color": "Ярко-зелёная",
+        "name": "Шипиловская ",
+        "neighbours": {
+            "Change": [
+                "line2_23"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_21",
+                "line10_23"
+            ]
+        }
+    },
+    "line10_23": {
+        "color": "Ярко-зелёная",
+        "name": "Зябликово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_22"
+            ]
+        }
+    },
+    "line10_3": {
+        "color": "Ярко-зелёная",
+        "name": "Окружная ",
+        "neighbours": {
+            "Change": [
+                "lineD1_12",
+                "line14_27"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_2",
+                "line10_4"
+            ]
+        }
+    },
+    "line10_4": {
+        "color": "Ярко-зелёная",
+        "name": "Петровско-Разумовская ",
+        "neighbours": {
+            "Change": [
+                "line9_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_3",
+                "line10_5"
+            ]
+        }
+    },
+    "line10_5": {
+        "color": "Ярко-зелёная",
+        "name": "Фонвизинская ",
+        "neighbours": {
+            "Change": [
+                "line13_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_4",
+                "line10_6"
+            ]
+        }
+    },
+    "line10_6": {
+        "color": "Ярко-зелёная",
+        "name": "Бутырская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_5",
+                "line10_7"
+            ]
+        }
+    },
+    "line10_7": {
+        "color": "Ярко-зелёная",
+        "name": "Марьина Роща ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line10_6",
+                "line10_8"
+            ]
+        }
+    },
+    "line10_8": {
+        "color": "Ярко-зелёная",
+        "name": "Достоевская ",
+        "neighbours": {
+            "Change": [
+                "line9_10"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_7",
+                "line10_9"
+            ]
+        }
+    },
+    "line10_9": {
+        "color": "Ярко-зелёная",
+        "name": "Трубная ",
+        "neighbours": {
+            "Change": [
+                "line1_8",
+                "line6_10"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line10_8",
+                "line10_10"
+            ]
+        }
+    },
+    "line11_1": {
+        "color": "Бирюзовая",
+        "name": "Савёловская ",
+        "neighbours": {
+            "Change": [
+                "line9_8",
+                "lineD1_16"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line11_2"
+            ]
+        }
+    },
+    "line11_11": {
+        "color": "Бирюзовая",
+        "name": "Давыдково ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_12"
+            ]
+        }
+    },
+    "line11_12": {
+        "color": "Бирюзовая",
+        "name": "Аминьевская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_11"
+            ]
+        }
+    },
+    "line11_15": {
+        "color": "Бирюзовая",
+        "name": "Улица Новаторов ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": []
+        }
+    },
+    "line11_17": {
+        "color": "Бирюзовая",
+        "name": "Зюзино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_18"
+            ]
+        }
+    },
+    "line11_18": {
+        "color": "Бирюзовая",
+        "name": "Каховская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_17",
+                "line11_19"
+            ]
+        }
+    },
+    "line11_19": {
+        "color": "Бирюзовая",
+        "name": "Варшавская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_18"
+            ]
+        }
+    },
+    "line11_2": {
+        "color": "Бирюзовая",
+        "name": "Петровский парк ",
+        "neighbours": {
+            "Change": [
+                "line2_8"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line11_1",
+                "line11_3"
+            ]
+        }
+    },
+    "line11_21": {
+        "color": "Бирюзовая",
+        "name": "Кленовый бульвар ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_22"
+            ]
+        }
+    },
+    "line11_22": {
+        "color": "Бирюзовая",
+        "name": "Нагатинский затон ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_21"
+            ]
+        }
+    },
+    "line11_3": {
+        "color": "Бирюзовая",
+        "name": "ЦСКА ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_2",
+                "line11_4"
+            ]
+        }
+    },
+    "line11_4": {
+        "color": "Бирюзовая",
+        "name": "Хорошёвская ",
+        "neighbours": {
+            "Change": [
+                "line7_7",
+                "line14_20"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line11_3",
+                "line11_5"
+            ]
+        }
+    },
+    "line11_5": {
+        "color": "Бирюзовая",
+        "name": "Шелепиха ",
+        "neighbours": {
+            "Change": [
+                "lineD1_19"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line11_4",
+                "line11_6"
+            ]
+        }
+    },
+    "line11_6": {
+        "color": "Бирюзовая",
+        "name": "Деловой центр ",
+        "neighbours": {
+            "Change": [
+                "line4_5",
+                "line8A_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line11_5",
+                "line11_7"
+            ]
+        }
+    },
+    "line11_7": {
+        "color": "Бирюзовая",
+        "name": "Мнёвники ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_6",
+                "line11_8"
+            ]
+        }
+    },
+    "line11_8": {
+        "color": "Бирюзовая",
+        "name": "Карамышево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_7",
+                "line11_9"
+            ]
+        }
+    },
+    "line11_9": {
+        "color": "Бирюзовая",
+        "name": "Терехово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line11_8"
+            ]
+        }
+    },
+    "line12_1": {
+        "color": "Серо-голубая",
+        "name": "Битцевский парк ",
+        "neighbours": {
+            "Change": [
+                "line6_24"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line12_2"
+            ]
+        }
+    },
+    "line12_2": {
+        "color": "Серо-голубая",
+        "name": "Лесопарковая ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line12_1",
+                "line12_3"
+            ]
+        }
+    },
+    "line12_3": {
+        "color": "Серо-голубая",
+        "name": "Улица Старокачаловская ",
+        "neighbours": {
+            "Change": [
+                "line9_25"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line12_2",
+                "line12_4"
+            ]
+        }
+    },
+    "line12_4": {
+        "color": "Серо-голубая",
+        "name": "Улица Скобелевская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line12_3",
+                "line12_5"
+            ]
+        }
+    },
+    "line12_5": {
+        "color": "Серо-голубая",
+        "name": "Бульвар Адмирала Ушакова ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line12_4",
+                "line12_6"
+            ]
+        }
+    },
+    "line12_6": {
+        "color": "Серо-голубая",
+        "name": "Улица Горчакова ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line12_5",
+                "line12_7"
+            ]
+        }
+    },
+    "line12_7": {
+        "color": "Серо-голубая",
+        "name": "Бунинская аллея ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line12_6"
+            ]
+        }
+    },
+    "line13_1": {
+        "color": "Светло-бирюзовая",
+        "name": "Ул. Сергея Эйзенштейна ",
+        "neighbours": {
+            "Change": [
+                "line6_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line13_2"
+            ]
+        }
+    },
+    "line13_2": {
+        "color": "Светло-бирюзовая",
+        "name": "Выставочный центр ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line13_1",
+                "line13_3"
+            ]
+        }
+    },
+    "line13_3": {
+        "color": "Светло-бирюзовая",
+        "name": "Ул. Академика Королёва ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line13_2",
+                "line13_4"
+            ]
+        }
+    },
+    "line13_4": {
+        "color": "Светло-бирюзовая",
+        "name": "Телецентр ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line13_3",
+                "line13_5"
+            ]
+        }
+    },
+    "line13_5": {
+        "color": "Светло-бирюзовая",
+        "name": "Ул. Милашенкова ",
+        "neighbours": {
+            "Change": [
+                "line10_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line13_4",
+                "line13_6"
+            ]
+        }
+    },
+    "line13_6": {
+        "color": "Светло-бирюзовая",
+        "name": "Тимирязевская ",
+        "neighbours": {
+            "Change": [
+                "line9_6"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line13_5"
+            ]
+        }
+    },
+    "line14_1": {
+        "color": "МЦК",
+        "name": "Бульвар Рокоссовского ",
+        "neighbours": {
+            "Change": [
+                "line1_1"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_2"
+            ]
+        }
+    },
+    "line14_10": {
+        "color": "МЦК",
+        "name": "Дубровка ",
+        "neighbours": {
+            "Change": [
+                "line10_13",
+                "line10_14"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_9",
+                "line14_11"
+            ]
+        }
+    },
+    "line14_11": {
+        "color": "МЦК",
+        "name": "Автозаводская ",
+        "neighbours": {
+            "Change": [
+                "line2_15"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_10",
+                "line14_12"
+            ]
+        }
+    },
+    "line14_12": {
+        "color": "МЦК",
+        "name": "ЗИЛ ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line14_11",
+                "line14_13"
+            ]
+        }
+    },
+    "line14_13": {
+        "color": "МЦК",
+        "name": "Верхние Котлы ",
+        "neighbours": {
+            "Change": [
+                "line9_16"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_12",
+                "line14_14"
+            ]
+        }
+    },
+    "line14_14": {
+        "color": "МЦК",
+        "name": "Крымская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line14_13",
+                "line14_15"
+            ]
+        }
+    },
+    "line14_15": {
+        "color": "МЦК",
+        "name": "Площадь Гагарина ",
+        "neighbours": {
+            "Change": [
+                "line6_15"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_14",
+                "line14_16"
+            ]
+        }
+    },
+    "line14_16": {
+        "color": "МЦК",
+        "name": "Лужники ",
+        "neighbours": {
+            "Change": [
+                "line1_15"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_15",
+                "line14_17"
+            ]
+        }
+    },
+    "line14_17": {
+        "color": "МЦК",
+        "name": "Кутузовская ",
+        "neighbours": {
+            "Change": [
+                "line4_8"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_16",
+                "line14_18"
+            ]
+        }
+    },
+    "line14_18": {
+        "color": "МЦК",
+        "name": "Деловой центр МЦК ",
+        "neighbours": {
+            "Change": [
+                "line4_6",
+                "lineD1_19"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_17",
+                "line14_19"
+            ]
+        }
+    },
+    "line14_19": {
+        "color": "МЦК",
+        "name": "Шелепиха ",
+        "neighbours": {
+            "Change": [
+                "line8A_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_18",
+                "line14_20"
+            ]
+        }
+    },
+    "line14_2": {
+        "color": "МЦК",
+        "name": "Локомотив ",
+        "neighbours": {
+            "Change": [
+                "line1_2"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_1",
+                "line14_3"
+            ]
+        }
+    },
+    "line14_20": {
+        "color": "МЦК",
+        "name": "Хорошёво ",
+        "neighbours": {
+            "Change": [
+                "line11_4",
+                "line7_7"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_19",
+                "line14_21"
+            ]
+        }
+    },
+    "line14_21": {
+        "color": "МЦК",
+        "name": "Зорге ",
+        "neighbours": {
+            "Change": [
+                "line7_6"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_20",
+                "line14_22"
+            ]
+        }
+    },
+    "line14_22": {
+        "color": "МЦК",
+        "name": "Панфиловская ",
+        "neighbours": {
+            "Change": [
+                "line7_6"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_21",
+                "line14_23"
+            ]
+        }
+    },
+    "line14_23": {
+        "color": "МЦК",
+        "name": "Стрешнево ",
+        "neighbours": {
+            "Change": [
+                "lineD2_11"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_22",
+                "line14_24"
+            ]
+        }
+    },
+    "line14_24": {
+        "color": "МЦК",
+        "name": "Балтийская ",
+        "neighbours": {
+            "Change": [
+                "line2_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_23",
+                "line14_25"
+            ]
+        }
+    },
+    "line14_25": {
+        "color": "МЦК",
+        "name": "Коптево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line14_24",
+                "line14_26"
+            ]
+        }
+    },
+    "line14_26": {
+        "color": "МЦК",
+        "name": "Лихоборы ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line14_25",
+                "line14_27"
+            ]
+        }
+    },
+    "line14_27": {
+        "color": "МЦК",
+        "name": "Окружная ",
+        "neighbours": {
+            "Change": [
+                "line10_3",
+                "lineD1_12"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_26",
+                "line14_28"
+            ]
+        }
+    },
+    "line14_28": {
+        "color": "МЦК",
+        "name": "Владыкино ",
+        "neighbours": {
+            "Change": [
+                "line9_4"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_27",
+                "line14_29"
+            ]
+        }
+    },
+    "line14_29": {
+        "color": "МЦК",
+        "name": "Ботанический сад ",
+        "neighbours": {
+            "Change": [
+                "line6_4"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_28",
+                "line14_30"
+            ]
+        }
+    },
+    "line14_3": {
+        "color": "МЦК",
+        "name": "Измайлово ",
+        "neighbours": {
+            "Change": [
+                "line3_19"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_2",
+                "line14_4"
+            ]
+        }
+    },
+    "line14_30": {
+        "color": "МЦК",
+        "name": "Ростокино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line14_29",
+                "line14_31"
+            ]
+        }
+    },
+    "line14_31": {
+        "color": "МЦК",
+        "name": "Белокаменная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line14_30"
+            ]
+        }
+    },
+    "line14_4": {
+        "color": "МЦК",
+        "name": "Соколиная Гора ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line14_3",
+                "line14_5"
+            ]
+        }
+    },
+    "line14_5": {
+        "color": "МЦК",
+        "name": "Шоссе Энтузиастов ",
+        "neighbours": {
+            "Change": [
+                "line8_4"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_4",
+                "line14_6"
+            ]
+        }
+    },
+    "line14_6": {
+        "color": "МЦК",
+        "name": "Андроновка ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line14_5",
+                "line14_7"
+            ]
+        }
+    },
+    "line14_7": {
+        "color": "МЦК",
+        "name": "Нижегородская ",
+        "neighbours": {
+            "Change": [
+                "line15_3"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_6",
+                "line14_8"
+            ]
+        }
+    },
+    "line14_8": {
+        "color": "МЦК",
+        "name": "Новохохловская ",
+        "neighbours": {
+            "Change": [
+                "lineD2_21"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_7",
+                "line14_9"
+            ]
+        }
+    },
+    "line14_9": {
+        "color": "МЦК",
+        "name": "Угрешская ",
+        "neighbours": {
+            "Change": [
+                "line7_16"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line14_8",
+                "line14_10"
+            ]
+        }
+    },
+    "line15_0": {
+        "color": "Розовая",
+        "name": "Электрозаводская ",
+        "neighbours": {
+            "Change": [
+                "line3_17"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line15_1"
+            ]
+        }
+    },
+    "line15_1": {
+        "color": "Розовая",
+        "name": "Лефортово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line15_0",
+                "line15_2"
+            ]
+        }
+    },
+    "line15_10": {
+        "color": "Розовая",
+        "name": "Некрасовка ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line15_9"
+            ]
+        }
+    },
+    "line15_2": {
+        "color": "Розовая",
+        "name": "Авиамоторная ",
+        "neighbours": {
+            "Change": [
+                "line8_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line15_1",
+                "line15_3"
+            ]
+        }
+    },
+    "line15_3": {
+        "color": "Розовая",
+        "name": "Нижегородская ",
+        "neighbours": {
+            "Change": [
+                "line14_7"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line15_2",
+                "line15_4"
+            ]
+        }
+    },
+    "line15_4": {
+        "color": "Розовая",
+        "name": "Стахановская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line15_3",
+                "line15_5"
+            ]
+        }
+    },
+    "line15_5": {
+        "color": "Розовая",
+        "name": "Окская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line15_4",
+                "line15_6"
+            ]
+        }
+    },
+    "line15_6": {
+        "color": "Розовая",
+        "name": "Юго-Восточная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line15_5",
+                "line15_7"
+            ]
+        }
+    },
+    "line15_7": {
+        "color": "Розовая",
+        "name": "Косино ",
+        "neighbours": {
+            "Change": [
+                "line7_21"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line15_6",
+                "line15_8"
+            ]
+        }
+    },
+    "line15_8": {
+        "color": "Розовая",
+        "name": "Улица Дмитриевского ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line15_7",
+                "line15_9"
+            ]
+        }
+    },
+    "line15_9": {
+        "color": "Розовая",
+        "name": "Лухмановская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line15_8",
+                "line15_10"
+            ]
+        }
+    },
+    "line1_1": {
+        "color": "Красная",
+        "name": "Бульвар Рокоссовского ",
+        "neighbours": {
+            "Change": [
+                "line14_1"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line1_2"
+            ]
+        }
+    },
+    "line1_10": {
+        "color": "Красная",
+        "name": "Охотный Ряд ",
+        "neighbours": {
+            "Change": [
+                "line2_12"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line1_9",
+                "line1_11"
+            ]
+        }
+    },
+    "line1_11": {
+        "color": "Красная",
+        "name": "Библиотека им. Ленина ",
+        "neighbours": {
+            "Change": [
+                "line3_13",
+                "line4_1",
+                "line9_12"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line1_10",
+                "line1_12"
+            ]
+        }
+    },
+    "line1_12": {
+        "color": "Красная",
+        "name": "Кропоткинская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_11",
+                "line1_13"
+            ]
+        }
+    },
+    "line1_13": {
+        "color": "Красная",
+        "name": "Парк культуры ",
+        "neighbours": {
+            "Change": [
+                "line5_7"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line1_12",
+                "line1_14"
+            ]
+        }
+    },
+    "line1_14": {
+        "color": "Красная",
+        "name": "Фрунзенская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_13",
+                "line1_15"
+            ]
+        }
+    },
+    "line1_15": {
+        "color": "Красная",
+        "name": "Спортивная ",
+        "neighbours": {
+            "Change": [
+                "line14_16"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line1_14",
+                "line1_16"
+            ]
+        }
+    },
+    "line1_16": {
+        "color": "Красная",
+        "name": "Воробьёвы горы ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_15",
+                "line1_17"
+            ]
+        }
+    },
+    "line1_17": {
+        "color": "Красная",
+        "name": "Университет ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_16",
+                "line1_18"
+            ]
+        }
+    },
+    "line1_18": {
+        "color": "Красная",
+        "name": "Проспект Вернадского ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_17",
+                "line1_19"
+            ]
+        }
+    },
+    "line1_19": {
+        "color": "Красная",
+        "name": "Юго-Западная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_18",
+                "line1_20"
+            ]
+        }
+    },
+    "line1_2": {
+        "color": "Красная",
+        "name": "Черкизовская ",
+        "neighbours": {
+            "Change": [
+                "line14_2"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line1_1",
+                "line1_3"
+            ]
+        }
+    },
+    "line1_20": {
+        "color": "Красная",
+        "name": "Тропарёво ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_19",
+                "line1_21"
+            ]
+        }
+    },
+    "line1_21": {
+        "color": "Красная",
+        "name": "Румянцево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_20",
+                "line1_22"
+            ]
+        }
+    },
+    "line1_22": {
+        "color": "Красная",
+        "name": "Саларьево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_21",
+                "line1_23"
+            ]
+        }
+    },
+    "line1_23": {
+        "color": "Красная",
+        "name": "Филатов Луг ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_22",
+                "line1_24"
+            ]
+        }
+    },
+    "line1_24": {
+        "color": "Красная",
+        "name": "Прокшино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_23",
+                "line1_25"
+            ]
+        }
+    },
+    "line1_25": {
+        "color": "Красная",
+        "name": "Ольховая ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_24",
+                "line1_26"
+            ]
+        }
+    },
+    "line1_26": {
+        "color": "Красная",
+        "name": "Коммунарка ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_25"
+            ]
+        }
+    },
+    "line1_3": {
+        "color": "Красная",
+        "name": "Преображенская площадь ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_2",
+                "line1_4"
+            ]
+        }
+    },
+    "line1_4": {
+        "color": "Красная",
+        "name": "Сокольники ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_3",
+                "line1_5"
+            ]
+        }
+    },
+    "line1_5": {
+        "color": "Красная",
+        "name": "Красносельская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_4",
+                "line1_6"
+            ]
+        }
+    },
+    "line1_6": {
+        "color": "Красная",
+        "name": "Комсомольская ",
+        "neighbours": {
+            "Change": [
+                "lineD2_17",
+                "line5_1"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line1_5",
+                "line1_7"
+            ]
+        }
+    },
+    "line1_7": {
+        "color": "Красная",
+        "name": "Красные Ворота ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line1_6",
+                "line1_8"
+            ]
+        }
+    },
+    "line1_8": {
+        "color": "Красная",
+        "name": "Чистые пруды ",
+        "neighbours": {
+            "Change": [
+                "line10_9",
+                "line6_10"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line1_7",
+                "line1_9"
+            ]
+        }
+    },
+    "line1_9": {
+        "color": "Красная",
+        "name": "Лубянка ",
+        "neighbours": {
+            "Change": [
+                "line7_12"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line1_8",
+                "line1_10"
+            ]
+        }
+    },
+    "line2_1": {
+        "color": "Тёмно-зелёная",
+        "name": "Ховрино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_2"
+            ]
+        }
+    },
+    "line2_10": {
+        "color": "Тёмно-зелёная",
+        "name": "Маяковская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_9",
+                "line2_11"
+            ]
+        }
+    },
+    "line2_11": {
+        "color": "Тёмно-зелёная",
+        "name": "Тверская ",
+        "neighbours": {
+            "Change": [
+                "line7_11",
+                "line9_11"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line2_10",
+                "line2_12"
+            ]
+        }
+    },
+    "line2_12": {
+        "color": "Тёмно-зелёная",
+        "name": "Театральная ",
+        "neighbours": {
+            "Change": [
+                "line1_10",
+                "line3_14"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line2_11",
+                "line2_13"
+            ]
+        }
+    },
+    "line2_13": {
+        "color": "Тёмно-зелёная",
+        "name": "Новокузнецкая ",
+        "neighbours": {
+            "Change": [
+                "line6_12",
+                "line8_8"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line2_12",
+                "line2_14"
+            ]
+        }
+    },
+    "line2_14": {
+        "color": "Тёмно-зелёная",
+        "name": "Павелецкая ",
+        "neighbours": {
+            "Change": [
+                "line5_4"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line2_13",
+                "line2_15"
+            ]
+        }
+    },
+    "line2_15": {
+        "color": "Тёмно-зелёная",
+        "name": "Автозаводская ",
+        "neighbours": {
+            "Change": [
+                "line14_11"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line2_14",
+                "line2_16"
+            ]
+        }
+    },
+    "line2_16": {
+        "color": "Тёмно-зелёная",
+        "name": "Технопарк ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_15",
+                "line2_17"
+            ]
+        }
+    },
+    "line2_17": {
+        "color": "Тёмно-зелёная",
+        "name": "Коломенская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_16",
+                "line2_18"
+            ]
+        }
+    },
+    "line2_18": {
+        "color": "Тёмно-зелёная",
+        "name": "Каширская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_17",
+                "line2_19"
+            ]
+        }
+    },
+    "line2_19": {
+        "color": "Тёмно-зелёная",
+        "name": "Кантемировская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_18",
+                "line2_20"
+            ]
+        }
+    },
+    "line2_2": {
+        "color": "Тёмно-зелёная",
+        "name": "Беломорская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_1",
+                "line2_3"
+            ]
+        }
+    },
+    "line2_20": {
+        "color": "Тёмно-зелёная",
+        "name": "Царицыно ",
+        "neighbours": {
+            "Change": [
+                "lineD2_29"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line2_19",
+                "line2_21"
+            ]
+        }
+    },
+    "line2_21": {
+        "color": "Тёмно-зелёная",
+        "name": "Орехово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_20",
+                "line2_22"
+            ]
+        }
+    },
+    "line2_22": {
+        "color": "Тёмно-зелёная",
+        "name": "Домодедовская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_21",
+                "line2_23"
+            ]
+        }
+    },
+    "line2_23": {
+        "color": "Тёмно-зелёная",
+        "name": "Красногвардейская ",
+        "neighbours": {
+            "Change": [
+                "line10_22"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line2_22",
+                "line2_24"
+            ]
+        }
+    },
+    "line2_24": {
+        "color": "Тёмно-зелёная",
+        "name": "Алма-Атинская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_23"
+            ]
+        }
+    },
+    "line2_3": {
+        "color": "Тёмно-зелёная",
+        "name": "Речной вокзал ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_2",
+                "line2_4"
+            ]
+        }
+    },
+    "line2_4": {
+        "color": "Тёмно-зелёная",
+        "name": "Водный стадион ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_3",
+                "line2_5"
+            ]
+        }
+    },
+    "line2_5": {
+        "color": "Тёмно-зелёная",
+        "name": "Войковская ",
+        "neighbours": {
+            "Change": [
+                "line14_24",
+                "lineD2_11"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line2_4",
+                "line2_6"
+            ]
+        }
+    },
+    "line2_6": {
+        "color": "Тёмно-зелёная",
+        "name": "Сокол ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_5",
+                "line2_7"
+            ]
+        }
+    },
+    "line2_7": {
+        "color": "Тёмно-зелёная",
+        "name": "Аэропорт ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line2_6",
+                "line2_8"
+            ]
+        }
+    },
+    "line2_8": {
+        "color": "Тёмно-зелёная",
+        "name": "Динамо ",
+        "neighbours": {
+            "Change": [
+                "line11_2"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line2_7",
+                "line2_9"
+            ]
+        }
+    },
+    "line2_9": {
+        "color": "Тёмно-зелёная",
+        "name": "Белорусская ",
+        "neighbours": {
+            "Change": [
+                "line5_10",
+                "lineD1_17"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line2_8",
+                "line2_10"
+            ]
+        }
+    },
+    "line3_1": {
+        "color": "Синяя",
+        "name": "Пятницкое шоссе ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_2"
+            ]
+        }
+    },
+    "line3_10": {
+        "color": "Синяя",
+        "name": "Парк Победы ",
+        "neighbours": {
+            "Change": [
+                "line8A_6"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line3_9",
+                "line3_11"
+            ]
+        }
+    },
+    "line3_11": {
+        "color": "Синяя",
+        "name": "Киевская ",
+        "neighbours": {
+            "Change": [
+                "line4_4",
+                "line5_8"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line3_10",
+                "line3_12"
+            ]
+        }
+    },
+    "line3_12": {
+        "color": "Синяя",
+        "name": "Смоленская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_11",
+                "line3_13"
+            ]
+        }
+    },
+    "line3_13": {
+        "color": "Синяя",
+        "name": "Арбатская ",
+        "neighbours": {
+            "Change": [
+                "line1_11",
+                "line4_1",
+                "line9_12"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line3_12",
+                "line3_14"
+            ]
+        }
+    },
+    "line3_14": {
+        "color": "Синяя",
+        "name": "Площадь Революции ",
+        "neighbours": {
+            "Change": [
+                "line2_12"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line3_13",
+                "line3_15"
+            ]
+        }
+    },
+    "line3_15": {
+        "color": "Синяя",
+        "name": "Курская ",
+        "neighbours": {
+            "Change": [
+                "line10_10",
+                "line5_2"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line3_14",
+                "line3_16"
+            ]
+        }
+    },
+    "line3_16": {
+        "color": "Синяя",
+        "name": "Бауманская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_15",
+                "line3_17"
+            ]
+        }
+    },
+    "line3_17": {
+        "color": "Синяя",
+        "name": "Электрозаводская ",
+        "neighbours": {
+            "Change": [
+                "line15_0"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line3_16",
+                "line3_18"
+            ]
+        }
+    },
+    "line3_18": {
+        "color": "Синяя",
+        "name": "Семёновская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_17",
+                "line3_19"
+            ]
+        }
+    },
+    "line3_19": {
+        "color": "Синяя",
+        "name": "Партизанская ",
+        "neighbours": {
+            "Change": [
+                "line14_3"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line3_18",
+                "line3_20"
+            ]
+        }
+    },
+    "line3_2": {
+        "color": "Синяя",
+        "name": "Митино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_1",
+                "line3_3"
+            ]
+        }
+    },
+    "line3_20": {
+        "color": "Синяя",
+        "name": "Измайловская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_19",
+                "line3_21"
+            ]
+        }
+    },
+    "line3_21": {
+        "color": "Синяя",
+        "name": "Первомайская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_20",
+                "line3_22"
+            ]
+        }
+    },
+    "line3_22": {
+        "color": "Синяя",
+        "name": "Щёлковская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_21"
+            ]
+        }
+    },
+    "line3_3": {
+        "color": "Синяя",
+        "name": "Волоколамская ",
+        "neighbours": {
+            "Change": [
+                "lineD2_7"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line3_2",
+                "line3_4"
+            ]
+        }
+    },
+    "line3_4": {
+        "color": "Синяя",
+        "name": "Мякинино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_3",
+                "line3_5"
+            ]
+        }
+    },
+    "line3_5": {
+        "color": "Синяя",
+        "name": "Строгино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_4",
+                "line3_6"
+            ]
+        }
+    },
+    "line3_6": {
+        "color": "Синяя",
+        "name": "Крылатское ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_5",
+                "line3_7"
+            ]
+        }
+    },
+    "line3_7": {
+        "color": "Синяя",
+        "name": "Молодёжная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line3_6",
+                "line3_8"
+            ]
+        }
+    },
+    "line3_8": {
+        "color": "Синяя",
+        "name": "Кунцевская ",
+        "neighbours": {
+            "Change": [
+                "line4_13",
+                "line4_13"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line3_7",
+                "line3_9"
+            ]
+        }
+    },
+    "line3_9": {
+        "color": "Синяя",
+        "name": "Славянский бульвар ",
+        "neighbours": {
+            "Change": [
+                "lineD1_21"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line3_8",
+                "line3_10"
+            ]
+        }
+    },
+    "line4_1": {
+        "color": "Голубая",
+        "name": "Александровский сад ",
+        "neighbours": {
+            "Change": [
+                "line1_11",
+                "line3_13"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line4_2"
+            ]
+        }
+    },
+    "line4_10": {
+        "color": "Голубая",
+        "name": "Багратионовская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line4_9",
+                "line4_11"
+            ]
+        }
+    },
+    "line4_11": {
+        "color": "Голубая",
+        "name": "Филевский парк ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line4_10",
+                "line4_12"
+            ]
+        }
+    },
+    "line4_12": {
+        "color": "Голубая",
+        "name": "Пионерская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line4_11",
+                "line4_13"
+            ]
+        }
+    },
+    "line4_13": {
+        "color": "Голубая",
+        "name": "Кунцевская ",
+        "neighbours": {
+            "Change": [
+                "line3_8",
+                "line3_8",
+                "lineD1_22"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line4_12"
+            ]
+        }
+    },
+    "line4_2": {
+        "color": "Голубая",
+        "name": "Арбатская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line4_1",
+                "line4_3"
+            ]
+        }
+    },
+    "line4_3": {
+        "color": "Голубая",
+        "name": "Смоленская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line4_2",
+                "line4_4"
+            ]
+        }
+    },
+    "line4_4": {
+        "color": "Голубая",
+        "name": "Киевская ",
+        "neighbours": {
+            "Change": [
+                "line3_11",
+                "line5_8"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line4_3",
+                "line4_5"
+            ]
+        }
+    },
+    "line4_5": {
+        "color": "Голубая",
+        "name": "Выставочная ",
+        "neighbours": {
+            "Change": [
+                "line8A_5",
+                "line11_6",
+                "lineD1_19"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line4_4",
+                "line4_6"
+            ]
+        }
+    },
+    "line4_6": {
+        "color": "Голубая",
+        "name": "Международная ",
+        "neighbours": {
+            "Change": [
+                "line14_18",
+                "lineD1_19"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line4_5",
+                "line4_7"
+            ]
+        }
+    },
+    "line4_7": {
+        "color": "Голубая",
+        "name": "Студенческая ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line4_8"
+            ]
+        }
+    },
+    "line4_8": {
+        "color": "Голубая",
+        "name": "Кутузовская ",
+        "neighbours": {
+            "Change": [
+                "line14_17"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line4_7",
+                "line4_9"
+            ]
+        }
+    },
+    "line4_9": {
+        "color": "Голубая",
+        "name": "Фили ",
+        "neighbours": {
+            "Change": [
+                "lineD1_20"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line4_8",
+                "line4_10"
+            ]
+        }
+    },
+    "line5_1": {
+        "color": "Коричневая",
+        "name": "Комсомольская ",
+        "neighbours": {
+            "Change": [
+                "line1_6"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_2"
+            ]
+        }
+    },
+    "line5_10": {
+        "color": "Коричневая",
+        "name": "Белорусская ",
+        "neighbours": {
+            "Change": [
+                "line2_9",
+                "lineD1_17"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_9",
+                "line5_11"
+            ]
+        }
+    },
+    "line5_11": {
+        "color": "Коричневая",
+        "name": "Новослободская ",
+        "neighbours": {
+            "Change": [
+                "line9_9"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_10",
+                "line5_12"
+            ]
+        }
+    },
+    "line5_12": {
+        "color": "Коричневая",
+        "name": "Проспект Мира ",
+        "neighbours": {
+            "Change": [
+                "line6_8"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_11"
+            ]
+        }
+    },
+    "line5_2": {
+        "color": "Коричневая",
+        "name": "Курская ",
+        "neighbours": {
+            "Change": [
+                "line3_15",
+                "line10_10",
+                "lineD2_18"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_1",
+                "line5_3"
+            ]
+        }
+    },
+    "line5_3": {
+        "color": "Коричневая",
+        "name": "Таганская ",
+        "neighbours": {
+            "Change": [
+                "line7_14",
+                "line8_7"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_2",
+                "line5_4"
+            ]
+        }
+    },
+    "line5_4": {
+        "color": "Коричневая",
+        "name": "Павелецкая ",
+        "neighbours": {
+            "Change": [
+                "line2_14"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_3",
+                "line5_5"
+            ]
+        }
+    },
+    "line5_5": {
+        "color": "Коричневая",
+        "name": "Добрынинская ",
+        "neighbours": {
+            "Change": [
+                "line9_14"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_4",
+                "line5_6"
+            ]
+        }
+    },
+    "line5_6": {
+        "color": "Коричневая",
+        "name": "Октябрьская ",
+        "neighbours": {
+            "Change": [
+                "line6_13"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_5",
+                "line5_7"
+            ]
+        }
+    },
+    "line5_7": {
+        "color": "Коричневая",
+        "name": "Парк культуры ",
+        "neighbours": {
+            "Change": [
+                "line1_13"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_6",
+                "line5_8"
+            ]
+        }
+    },
+    "line5_8": {
+        "color": "Коричневая",
+        "name": "Киевская ",
+        "neighbours": {
+            "Change": [
+                "line3_11",
+                "line4_4"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_7",
+                "line5_9"
+            ]
+        }
+    },
+    "line5_9": {
+        "color": "Коричневая",
+        "name": "Красно-пресненская ",
+        "neighbours": {
+            "Change": [
+                "line7_10"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line5_8",
+                "line5_10"
+            ]
+        }
+    },
+    "line6_1": {
+        "color": "Оранжевая",
+        "name": "Медведково ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_2"
+            ]
+        }
+    },
+    "line6_10": {
+        "color": "Оранжевая",
+        "name": "Тургеневская ",
+        "neighbours": {
+            "Change": [
+                "line1_8",
+                "line10_9"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line6_9",
+                "line6_11"
+            ]
+        }
+    },
+    "line6_11": {
+        "color": "Оранжевая",
+        "name": "Китай-город ",
+        "neighbours": {
+            "Change": [
+                "line7_13"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line6_10",
+                "line6_12"
+            ]
+        }
+    },
+    "line6_12": {
+        "color": "Оранжевая",
+        "name": "Третьяковская ",
+        "neighbours": {
+            "Change": [
+                "line2_13",
+                "line8_8"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line6_11",
+                "line6_13"
+            ]
+        }
+    },
+    "line6_13": {
+        "color": "Оранжевая",
+        "name": "Октябрьская ",
+        "neighbours": {
+            "Change": [
+                "line5_6"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line6_12",
+                "line6_14"
+            ]
+        }
+    },
+    "line6_14": {
+        "color": "Оранжевая",
+        "name": "Шаболовская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_13",
+                "line6_15"
+            ]
+        }
+    },
+    "line6_15": {
+        "color": "Оранжевая",
+        "name": "Ленинский проспект ",
+        "neighbours": {
+            "Change": [
+                "line14_15"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line6_14",
+                "line6_16"
+            ]
+        }
+    },
+    "line6_16": {
+        "color": "Оранжевая",
+        "name": "Академическая ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_15",
+                "line6_17"
+            ]
+        }
+    },
+    "line6_17": {
+        "color": "Оранжевая",
+        "name": "Профсоюзная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_16",
+                "line6_18"
+            ]
+        }
+    },
+    "line6_18": {
+        "color": "Оранжевая",
+        "name": "Новые Черёмушки ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_17",
+                "line6_19"
+            ]
+        }
+    },
+    "line6_19": {
+        "color": "Оранжевая",
+        "name": "Калужская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_18",
+                "line6_20"
+            ]
+        }
+    },
+    "line6_2": {
+        "color": "Оранжевая",
+        "name": "Бабушкинская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_1",
+                "line6_3"
+            ]
+        }
+    },
+    "line6_20": {
+        "color": "Оранжевая",
+        "name": "Беляево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_19",
+                "line6_21"
+            ]
+        }
+    },
+    "line6_21": {
+        "color": "Оранжевая",
+        "name": "Коньково ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_20",
+                "line6_22"
+            ]
+        }
+    },
+    "line6_22": {
+        "color": "Оранжевая",
+        "name": "Тёплый Стан ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_21",
+                "line6_23"
+            ]
+        }
+    },
+    "line6_23": {
+        "color": "Оранжевая",
+        "name": "Ясенево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_22",
+                "line6_24"
+            ]
+        }
+    },
+    "line6_24": {
+        "color": "Оранжевая",
+        "name": "Новоясеневская ",
+        "neighbours": {
+            "Change": [
+                "line12_1"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line6_23"
+            ]
+        }
+    },
+    "line6_3": {
+        "color": "Оранжевая",
+        "name": "Свиблово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_2",
+                "line6_4"
+            ]
+        }
+    },
+    "line6_4": {
+        "color": "Оранжевая",
+        "name": "Ботанический сад ",
+        "neighbours": {
+            "Change": [
+                "line14_29"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line6_3",
+                "line6_5"
+            ]
+        }
+    },
+    "line6_5": {
+        "color": "Оранжевая",
+        "name": "ВДНХ ",
+        "neighbours": {
+            "Change": [
+                "line13_1"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line6_4",
+                "line6_6"
+            ]
+        }
+    },
+    "line6_6": {
+        "color": "Оранжевая",
+        "name": "Алексеевская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_5",
+                "line6_7"
+            ]
+        }
+    },
+    "line6_7": {
+        "color": "Оранжевая",
+        "name": "Рижская ",
+        "neighbours": {
+            "Change": [
+                "lineD2_16"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line6_6",
+                "line6_8"
+            ]
+        }
+    },
+    "line6_8": {
+        "color": "Оранжевая",
+        "name": "Проспект Мира ",
+        "neighbours": {
+            "Change": [
+                "line5_12"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line6_7",
+                "line6_9"
+            ]
+        }
+    },
+    "line6_9": {
+        "color": "Оранжевая",
+        "name": "Сухаревская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line6_8",
+                "line6_10"
+            ]
+        }
+    },
+    "line7_1": {
+        "color": "Фиолетовая",
+        "name": "Планерная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line7_2"
+            ]
+        }
+    },
+    "line7_10": {
+        "color": "Фиолетовая",
+        "name": "Баррикадная ",
+        "neighbours": {
+            "Change": [
+                "line5_9"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_9",
+                "line7_11"
+            ]
+        }
+    },
+    "line7_11": {
+        "color": "Фиолетовая",
+        "name": "Пушкинская ",
+        "neighbours": {
+            "Change": [
+                "line2_11",
+                "line9_11"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_10",
+                "line7_12"
+            ]
+        }
+    },
+    "line7_12": {
+        "color": "Фиолетовая",
+        "name": "Кузнецкий Мост ",
+        "neighbours": {
+            "Change": [
+                "line1_9"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_11",
+                "line7_13"
+            ]
+        }
+    },
+    "line7_13": {
+        "color": "Фиолетовая",
+        "name": "Китай-город ",
+        "neighbours": {
+            "Change": [
+                "line6_11"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_12",
+                "line7_14"
+            ]
+        }
+    },
+    "line7_14": {
+        "color": "Фиолетовая",
+        "name": "Таганская ",
+        "neighbours": {
+            "Change": [
+                "line5_3",
+                "line8_7"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_13",
+                "line7_15"
+            ]
+        }
+    },
+    "line7_15": {
+        "color": "Фиолетовая",
+        "name": "Пролетарская ",
+        "neighbours": {
+            "Change": [
+                "line10_12"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_14",
+                "line7_16"
+            ]
+        }
+    },
+    "line7_16": {
+        "color": "Фиолетовая",
+        "name": "Волгоградский проспект ",
+        "neighbours": {
+            "Change": [
+                "line14_9"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_15",
+                "line7_17"
+            ]
+        }
+    },
+    "line7_17": {
+        "color": "Фиолетовая",
+        "name": "Текстильщики ",
+        "neighbours": {
+            "Change": [
+                "lineD2_22"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_16",
+                "line7_18"
+            ]
+        }
+    },
+    "line7_18": {
+        "color": "Фиолетовая",
+        "name": "Кузьминки ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line7_17",
+                "line7_19"
+            ]
+        }
+    },
+    "line7_19": {
+        "color": "Фиолетовая",
+        "name": "Рязанский проспект ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line7_18",
+                "line7_20"
+            ]
+        }
+    },
+    "line7_2": {
+        "color": "Фиолетовая",
+        "name": "Сходненская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line7_1",
+                "line7_3"
+            ]
+        }
+    },
+    "line7_20": {
+        "color": "Фиолетовая",
+        "name": "Выхино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line7_19",
+                "line7_21"
+            ]
+        }
+    },
+    "line7_21": {
+        "color": "Фиолетовая",
+        "name": "Лермонтовский проспект ",
+        "neighbours": {
+            "Change": [
+                "line15_7"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_20",
+                "line7_22"
+            ]
+        }
+    },
+    "line7_22": {
+        "color": "Фиолетовая",
+        "name": "Жулебино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line7_21",
+                "line7_23"
+            ]
+        }
+    },
+    "line7_23": {
+        "color": "Фиолетовая",
+        "name": "Котельники ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line7_22"
+            ]
+        }
+    },
+    "line7_3": {
+        "color": "Фиолетовая",
+        "name": "Тушинская ",
+        "neighbours": {
+            "Change": [
+                "lineD2_9"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_2",
+                "line7_4"
+            ]
+        }
+    },
+    "line7_4": {
+        "color": "Фиолетовая",
+        "name": "Спартак ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line7_3",
+                "line7_5"
+            ]
+        }
+    },
+    "line7_5": {
+        "color": "Фиолетовая",
+        "name": "Щукинская ",
+        "neighbours": {
+            "Change": [
+                "lineD2_10"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_4",
+                "line7_6"
+            ]
+        }
+    },
+    "line7_6": {
+        "color": "Фиолетовая",
+        "name": "Октябрьское Поле ",
+        "neighbours": {
+            "Change": [
+                "line14_22",
+                "line14_21"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_5",
+                "line7_7"
+            ]
+        }
+    },
+    "line7_7": {
+        "color": "Фиолетовая",
+        "name": "Полежаевская ",
+        "neighbours": {
+            "Change": [
+                "line11_4",
+                "line14_20"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_6",
+                "line7_8"
+            ]
+        }
+    },
+    "line7_8": {
+        "color": "Фиолетовая",
+        "name": "Беговая ",
+        "neighbours": {
+            "Change": [
+                "lineD1_18"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line7_7",
+                "line7_9"
+            ]
+        }
+    },
+    "line7_9": {
+        "color": "Фиолетовая",
+        "name": "Улица 1905 года ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line7_8",
+                "line7_10"
+            ]
+        }
+    },
+    "line8A_10": {
+        "color": "Жёлтая",
+        "name": "Мичуринский проспект ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8A_9",
+                "line8A_11"
+            ]
+        }
+    },
+    "line8A_11": {
+        "color": "Жёлтая",
+        "name": "Озёрная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8A_10",
+                "line8A_12"
+            ]
+        }
+    },
+    "line8A_12": {
+        "color": "Жёлтая",
+        "name": "Говорово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8A_11",
+                "line8A_13"
+            ]
+        }
+    },
+    "line8A_13": {
+        "color": "Жёлтая",
+        "name": "Солнцево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8A_12",
+                "line8A_14"
+            ]
+        }
+    },
+    "line8A_14": {
+        "color": "Жёлтая",
+        "name": "Боровское шоссе ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8A_13",
+                "line8A_15"
+            ]
+        }
+    },
+    "line8A_15": {
+        "color": "Жёлтая",
+        "name": "Новопере-делкино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8A_14",
+                "line8A_16"
+            ]
+        }
+    },
+    "line8A_16": {
+        "color": "Жёлтая",
+        "name": "Рассказовка ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8A_15"
+            ]
+        }
+    },
+    "line8A_5": {
+        "color": "Жёлтая",
+        "name": "Деловой центр ",
+        "neighbours": {
+            "Change": [
+                "line14_19",
+                "line4_5",
+                "line11_6"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line8A_6"
+            ]
+        }
+    },
+    "line8A_6": {
+        "color": "Жёлтая",
+        "name": "Парк Победы ",
+        "neighbours": {
+            "Change": [
+                "line3_10"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line8A_5",
+                "line8A_7"
+            ]
+        }
+    },
+    "line8A_7": {
+        "color": "Жёлтая",
+        "name": "Минская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8A_6",
+                "line8A_8"
+            ]
+        }
+    },
+    "line8A_8": {
+        "color": "Жёлтая",
+        "name": "Ломоносовский проспект ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8A_7",
+                "line8A_9"
+            ]
+        }
+    },
+    "line8A_9": {
+        "color": "Жёлтая",
+        "name": "Раменки ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8A_8",
+                "line8A_10"
+            ]
+        }
+    },
+    "line8_1": {
+        "color": "Жёлтая",
+        "name": "Новокосино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8_2"
+            ]
+        }
+    },
+    "line8_2": {
+        "color": "Жёлтая",
+        "name": "Новогиреево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8_1",
+                "line8_3"
+            ]
+        }
+    },
+    "line8_3": {
+        "color": "Жёлтая",
+        "name": "Перово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line8_2",
+                "line8_4"
+            ]
+        }
+    },
+    "line8_4": {
+        "color": "Жёлтая",
+        "name": "Шоссе Энтузиастов ",
+        "neighbours": {
+            "Change": [
+                "line14_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line8_3",
+                "line8_5"
+            ]
+        }
+    },
+    "line8_5": {
+        "color": "Жёлтая",
+        "name": "Авиамоторная ",
+        "neighbours": {
+            "Change": [
+                "line15_2"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line8_4",
+                "line8_6"
+            ]
+        }
+    },
+    "line8_6": {
+        "color": "Жёлтая",
+        "name": "Площадь Ильича ",
+        "neighbours": {
+            "Change": [
+                "line10_11",
+                "lineD2_19"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line8_5",
+                "line8_7"
+            ]
+        }
+    },
+    "line8_7": {
+        "color": "Жёлтая",
+        "name": "Марксистская ",
+        "neighbours": {
+            "Change": [
+                "line5_3",
+                "line7_14"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line8_6",
+                "line8_8"
+            ]
+        }
+    },
+    "line8_8": {
+        "color": "Жёлтая",
+        "name": "Третьяковская ",
+        "neighbours": {
+            "Change": [
+                "line2_13",
+                "line6_12"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line8_7"
+            ]
+        }
+    },
+    "line9_1": {
+        "color": "Серая",
+        "name": "Алтуфьево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_2"
+            ]
+        }
+    },
+    "line9_10": {
+        "color": "Серая",
+        "name": "Цветной бульвар ",
+        "neighbours": {
+            "Change": [
+                "line10_8"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_9",
+                "line9_11"
+            ]
+        }
+    },
+    "line9_11": {
+        "color": "Серая",
+        "name": "Чеховская ",
+        "neighbours": {
+            "Change": [
+                "line7_11",
+                "line2_11"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_10",
+                "line9_12"
+            ]
+        }
+    },
+    "line9_12": {
+        "color": "Серая",
+        "name": "Боровицкая ",
+        "neighbours": {
+            "Change": [
+                "line1_11",
+                "line3_13"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_11",
+                "line9_13"
+            ]
+        }
+    },
+    "line9_13": {
+        "color": "Серая",
+        "name": "Полянка ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_12",
+                "line9_14"
+            ]
+        }
+    },
+    "line9_14": {
+        "color": "Серая",
+        "name": "Серпуховская ",
+        "neighbours": {
+            "Change": [
+                "line5_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_13",
+                "line9_15"
+            ]
+        }
+    },
+    "line9_15": {
+        "color": "Серая",
+        "name": "Тульская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_14",
+                "line9_16"
+            ]
+        }
+    },
+    "line9_16": {
+        "color": "Серая",
+        "name": "Нагатинская ",
+        "neighbours": {
+            "Change": [
+                "line14_13"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_15",
+                "line9_17"
+            ]
+        }
+    },
+    "line9_17": {
+        "color": "Серая",
+        "name": "Нагорная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_16",
+                "line9_18"
+            ]
+        }
+    },
+    "line9_18": {
+        "color": "Серая",
+        "name": "Нахимовский проспект ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_17",
+                "line9_19"
+            ]
+        }
+    },
+    "line9_19": {
+        "color": "Серая",
+        "name": "Севастопольская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_18",
+                "line9_20"
+            ]
+        }
+    },
+    "line9_2": {
+        "color": "Серая",
+        "name": "Бибирево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_1",
+                "line9_3"
+            ]
+        }
+    },
+    "line9_20": {
+        "color": "Серая",
+        "name": "Чертановская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_19",
+                "line9_21"
+            ]
+        }
+    },
+    "line9_21": {
+        "color": "Серая",
+        "name": "Южная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_20",
+                "line9_22"
+            ]
+        }
+    },
+    "line9_22": {
+        "color": "Серая",
+        "name": "Пражская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_21",
+                "line9_23"
+            ]
+        }
+    },
+    "line9_23": {
+        "color": "Серая",
+        "name": "Улица Академика Янгеля ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_22",
+                "line9_24"
+            ]
+        }
+    },
+    "line9_24": {
+        "color": "Серая",
+        "name": "Аннино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_23",
+                "line9_25"
+            ]
+        }
+    },
+    "line9_25": {
+        "color": "Серая",
+        "name": "Бульвар Дмитрия Донского ",
+        "neighbours": {
+            "Change": [
+                "line12_3"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_24"
+            ]
+        }
+    },
+    "line9_3": {
+        "color": "Серая",
+        "name": "Отрадное ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "line9_2",
+                "line9_4"
+            ]
+        }
+    },
+    "line9_4": {
+        "color": "Серая",
+        "name": "Владыкино ",
+        "neighbours": {
+            "Change": [
+                "line14_28"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_3",
+                "line9_5"
+            ]
+        }
+    },
+    "line9_5": {
+        "color": "Серая",
+        "name": "Петровско-Разумовская ",
+        "neighbours": {
+            "Change": [
+                "line10_4"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_4",
+                "line9_6"
+            ]
+        }
+    },
+    "line9_6": {
+        "color": "Серая",
+        "name": "Тимирязевская ",
+        "neighbours": {
+            "Change": [
+                "line13_6",
+                "lineD1_14"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_5",
+                "line9_7"
+            ]
+        }
+    },
+    "line9_7": {
+        "color": "Серая",
+        "name": "Дмитровская ",
+        "neighbours": {
+            "Change": [
+                "lineD2_14"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_6",
+                "line9_8"
+            ]
+        }
+    },
+    "line9_8": {
+        "color": "Серая",
+        "name": "Савёловская ",
+        "neighbours": {
+            "Change": [
+                "line11_1"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_7",
+                "line9_9"
+            ]
+        }
+    },
+    "line9_9": {
+        "color": "Серая",
+        "name": "Менделеевская ",
+        "neighbours": {
+            "Change": [
+                "line5_11"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "line9_8",
+                "line9_10"
+            ]
+        }
+    },
+    "lineD1_1": {
+        "color": "Диаметр 1",
+        "name": "Лобня ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_2"
+            ]
+        }
+    },
+    "lineD1_10": {
+        "color": "Диаметр 1",
+        "name": "Бескудниково ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_9",
+                "lineD1_11"
+            ]
+        }
+    },
+    "lineD1_11": {
+        "color": "Диаметр 1",
+        "name": "Дегунино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_10",
+                "lineD1_12"
+            ]
+        }
+    },
+    "lineD1_12": {
+        "color": "Диаметр 1",
+        "name": "Окружная ",
+        "neighbours": {
+            "Change": [
+                "line10_3",
+                "line14_27"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_11"
+            ]
+        }
+    },
+    "lineD1_14": {
+        "color": "Диаметр 1",
+        "name": "Тимирязевская ",
+        "neighbours": {
+            "Change": [
+                "line9_6"
+            ],
+            "Ground_change": [],
+            "Span": []
+        }
+    },
+    "lineD1_16": {
+        "color": "Диаметр 1",
+        "name": "Савёловская ",
+        "neighbours": {
+            "Change": [
+                "line11_1"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_17"
+            ]
+        }
+    },
+    "lineD1_17": {
+        "color": "Диаметр 1",
+        "name": "Белорусская ",
+        "neighbours": {
+            "Change": [
+                "line2_9",
+                "line5_10"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_16",
+                "lineD1_18"
+            ]
+        }
+    },
+    "lineD1_18": {
+        "color": "Диаметр 1",
+        "name": "Беговая ",
+        "neighbours": {
+            "Change": [
+                "line7_8"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_17",
+                "lineD1_19"
+            ]
+        }
+    },
+    "lineD1_19": {
+        "color": "Диаметр 1",
+        "name": "Тестовская ",
+        "neighbours": {
+            "Change": [
+                "line11_5",
+                "line4_5",
+                "line4_6",
+                "line14_18"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_18",
+                "lineD1_20"
+            ]
+        }
+    },
+    "lineD1_2": {
+        "color": "Диаметр 1",
+        "name": "Шереметьевская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_1",
+                "lineD1_3"
+            ]
+        }
+    },
+    "lineD1_20": {
+        "color": "Диаметр 1",
+        "name": "Фили ",
+        "neighbours": {
+            "Change": [
+                "line4_9"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_19",
+                "lineD1_21"
+            ]
+        }
+    },
+    "lineD1_21": {
+        "color": "Диаметр 1",
+        "name": "Славянский бульвар ",
+        "neighbours": {
+            "Change": [
+                "line3_9"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_20",
+                "lineD1_22"
+            ]
+        }
+    },
+    "lineD1_22": {
+        "color": "Диаметр 1",
+        "name": "Кунцевская ",
+        "neighbours": {
+            "Change": [
+                "line4_13"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_21",
+                "lineD1_23"
+            ]
+        }
+    },
+    "lineD1_23": {
+        "color": "Диаметр 1",
+        "name": "Рабочий Поселок ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_22",
+                "lineD1_24"
+            ]
+        }
+    },
+    "lineD1_24": {
+        "color": "Диаметр 1",
+        "name": "Сетунь ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_23",
+                "lineD1_25"
+            ]
+        }
+    },
+    "lineD1_25": {
+        "color": "Диаметр 1",
+        "name": "Немчиновка ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_24",
+                "lineD1_26"
+            ]
+        }
+    },
+    "lineD1_26": {
+        "color": "Диаметр 1",
+        "name": "Сколково ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_25",
+                "lineD1_27"
+            ]
+        }
+    },
+    "lineD1_27": {
+        "color": "Диаметр 1",
+        "name": "Баковка ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_26",
+                "lineD1_28"
+            ]
+        }
+    },
+    "lineD1_28": {
+        "color": "Диаметр 1",
+        "name": "Одинцово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_27"
+            ]
+        }
+    },
+    "lineD1_3": {
+        "color": "Диаметр 1",
+        "name": "Хлебниково ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_2",
+                "lineD1_4"
+            ]
+        }
+    },
+    "lineD1_4": {
+        "color": "Диаметр 1",
+        "name": "Водники ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_3",
+                "lineD1_5"
+            ]
+        }
+    },
+    "lineD1_5": {
+        "color": "Диаметр 1",
+        "name": "Долгопрудная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_4",
+                "lineD1_6"
+            ]
+        }
+    },
+    "lineD1_6": {
+        "color": "Диаметр 1",
+        "name": "Новодачная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_5",
+                "lineD1_7"
+            ]
+        }
+    },
+    "lineD1_7": {
+        "color": "Диаметр 1",
+        "name": "Марк ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_6",
+                "lineD1_8"
+            ]
+        }
+    },
+    "lineD1_8": {
+        "color": "Диаметр 1",
+        "name": "Лианозово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_7",
+                "lineD1_9"
+            ]
+        }
+    },
+    "lineD1_9": {
+        "color": "Диаметр 1",
+        "name": "Илимская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD1_8",
+                "lineD1_10"
+            ]
+        }
+    },
+    "lineD2_1": {
+        "color": "Диаметр 2",
+        "name": "Нахабино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_2"
+            ]
+        }
+    },
+    "lineD2_10": {
+        "color": "Диаметр 2",
+        "name": "Покровское-Стрешнево ",
+        "neighbours": {
+            "Change": [
+                "line7_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_9",
+                "lineD2_11"
+            ]
+        }
+    },
+    "lineD2_11": {
+        "color": "Диаметр 2",
+        "name": "Стрешнево ",
+        "neighbours": {
+            "Change": [
+                "line14_23",
+                "line2_5"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_10",
+                "lineD2_12"
+            ]
+        }
+    },
+    "lineD2_12": {
+        "color": "Диаметр 2",
+        "name": "Красный Балтиец ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_11",
+                "lineD2_13"
+            ]
+        }
+    },
+    "lineD2_13": {
+        "color": "Диаметр 2",
+        "name": "Гражданская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_12",
+                "lineD2_14"
+            ]
+        }
+    },
+    "lineD2_14": {
+        "color": "Диаметр 2",
+        "name": "Дмитровская ",
+        "neighbours": {
+            "Change": [
+                "line9_7"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_13",
+                "lineD2_15"
+            ]
+        }
+    },
+    "lineD2_15": {
+        "color": "Диаметр 2",
+        "name": "Марьина Роща ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_14",
+                "lineD2_16"
+            ]
+        }
+    },
+    "lineD2_16": {
+        "color": "Диаметр 2",
+        "name": "Рижская ",
+        "neighbours": {
+            "Change": [
+                "line6_7"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_15",
+                "lineD2_17"
+            ]
+        }
+    },
+    "lineD2_17": {
+        "color": "Диаметр 2",
+        "name": "Каланчёвская ",
+        "neighbours": {
+            "Change": [
+                "line1_6"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_16",
+                "lineD2_18"
+            ]
+        }
+    },
+    "lineD2_18": {
+        "color": "Диаметр 2",
+        "name": "Курская ",
+        "neighbours": {
+            "Change": [
+                "line5_2"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_17",
+                "lineD2_19"
+            ]
+        }
+    },
+    "lineD2_19": {
+        "color": "Диаметр 2",
+        "name": "Москва Товарная ",
+        "neighbours": {
+            "Change": [
+                "line10_12",
+                "line8_6"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_18",
+                "lineD2_20"
+            ]
+        }
+    },
+    "lineD2_2": {
+        "color": "Диаметр 2",
+        "name": "Аникеевка ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_1",
+                "lineD2_3"
+            ]
+        }
+    },
+    "lineD2_20": {
+        "color": "Диаметр 2",
+        "name": "Калитники ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_19",
+                "lineD2_21"
+            ]
+        }
+    },
+    "lineD2_21": {
+        "color": "Диаметр 2",
+        "name": "Новохохловская ",
+        "neighbours": {
+            "Change": [
+                "line14_8"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_20",
+                "lineD2_22"
+            ]
+        }
+    },
+    "lineD2_22": {
+        "color": "Диаметр 2",
+        "name": "Текстильщики ",
+        "neighbours": {
+            "Change": [
+                "line7_17"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_21"
+            ]
+        }
+    },
+    "lineD2_24": {
+        "color": "Диаметр 2",
+        "name": "Кубанская ",
+        "neighbours": {
+            "Change": [
+                "line10_15"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_25"
+            ]
+        }
+    },
+    "lineD2_25": {
+        "color": "Диаметр 2",
+        "name": "Депо ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_24",
+                "lineD2_26"
+            ]
+        }
+    },
+    "lineD2_26": {
+        "color": "Диаметр 2",
+        "name": "Перерва ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_25",
+                "lineD2_27"
+            ]
+        }
+    },
+    "lineD2_27": {
+        "color": "Диаметр 2",
+        "name": "Курьяново ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_26",
+                "lineD2_28"
+            ]
+        }
+    },
+    "lineD2_28": {
+        "color": "Диаметр 2",
+        "name": "Москворечье ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_27",
+                "lineD2_29"
+            ]
+        }
+    },
+    "lineD2_29": {
+        "color": "Диаметр 2",
+        "name": "Царицыно ",
+        "neighbours": {
+            "Change": [
+                "line2_20"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_28",
+                "lineD2_30"
+            ]
+        }
+    },
+    "lineD2_3": {
+        "color": "Диаметр 2",
+        "name": "Опалиха ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_2",
+                "lineD2_4"
+            ]
+        }
+    },
+    "lineD2_30": {
+        "color": "Диаметр 2",
+        "name": "Котляково ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_29",
+                "lineD2_31"
+            ]
+        }
+    },
+    "lineD2_31": {
+        "color": "Диаметр 2",
+        "name": "Покровское ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_30",
+                "lineD2_32"
+            ]
+        }
+    },
+    "lineD2_32": {
+        "color": "Диаметр 2",
+        "name": "Красный строитель ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_31",
+                "lineD2_33"
+            ]
+        }
+    },
+    "lineD2_33": {
+        "color": "Диаметр 2",
+        "name": "Битца ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_32",
+                "lineD2_34"
+            ]
+        }
+    },
+    "lineD2_34": {
+        "color": "Диаметр 2",
+        "name": "Бутово ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_33",
+                "lineD2_35"
+            ]
+        }
+    },
+    "lineD2_35": {
+        "color": "Диаметр 2",
+        "name": "Щербинка ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_34",
+                "lineD2_36"
+            ]
+        }
+    },
+    "lineD2_36": {
+        "color": "Диаметр 2",
+        "name": "Остафьево ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_35",
+                "lineD2_37"
+            ]
+        }
+    },
+    "lineD2_37": {
+        "color": "Диаметр 2",
+        "name": "Силикатная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_36",
+                "lineD2_38"
+            ]
+        }
+    },
+    "lineD2_38": {
+        "color": "Диаметр 2",
+        "name": "Подольск ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_37"
+            ]
+        }
+    },
+    "lineD2_4": {
+        "color": "Диаметр 2",
+        "name": "Красногорская ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_3",
+                "lineD2_5"
+            ]
+        }
+    },
+    "lineD2_5": {
+        "color": "Диаметр 2",
+        "name": "Павшино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_4",
+                "lineD2_6"
+            ]
+        }
+    },
+    "lineD2_6": {
+        "color": "Диаметр 2",
+        "name": "Пенягино ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_5",
+                "lineD2_7"
+            ]
+        }
+    },
+    "lineD2_7": {
+        "color": "Диаметр 2",
+        "name": "Волоколамская ",
+        "neighbours": {
+            "Change": [
+                "line3_3"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_6",
+                "lineD2_8"
+            ]
+        }
+    },
+    "lineD2_8": {
+        "color": "Диаметр 2",
+        "name": "Трикотажная ",
+        "neighbours": {
+            "Change": [],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_7",
+                "lineD2_9"
+            ]
+        }
+    },
+    "lineD2_9": {
+        "color": "Диаметр 2",
+        "name": "Тушинская ",
+        "neighbours": {
+            "Change": [
+                "line7_3"
+            ],
+            "Ground_change": [],
+            "Span": [
+                "lineD2_8",
+                "lineD2_10"
+            ]
+        }
+    }
+}

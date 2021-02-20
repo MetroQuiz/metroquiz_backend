@@ -1,0 +1,80 @@
+//
+//  File.swift
+//  
+//
+//  Created by Ulyana Eskova on 20.02.2021.
+//
+
+import Vapor
+import Fluent
+
+// Stage between two stations, like edge in graph
+
+enum StageType: String, Codable {
+    case span
+    case change
+    case ground_change
+}
+
+final class Stage: Model {
+    static let schema = "stages"
+    
+    
+    @ID(key: .id)
+    var id: UUID?
+    
+    
+    @Parent(key: "origin_id")
+    var origin: Station
+    
+    @Parent(key: "destination_id")
+    var destination: Station
+    
+    @Enum(key: "stage_type")
+    var stage_type: StageType
+    
+    init() {}
+    
+    init(id: UUID? = nil, origin: Station, destination: Station, stage_type: StageType) throws {
+        self.id = id
+        self.$origin.id = try origin.requireID()
+        self.$destination.id = try destination.requireID()
+        self.stage_type = stage_type
+    }
+    
+}
+
+
+final class Station: Model {
+    static let schema = "stations"
+    
+    @ID(key: .id)
+    var id: UUID?
+    
+    @Siblings(through: Stage.self, from: \.$origin, to: \.$destination)
+    var neighbours: [Station]
+    
+    @Field(key: "name")
+    var name: String
+    
+    @Field(key: "line_color")
+    var line_color: String
+    
+    @Field(key: "svg_id")
+    var svg_id: String
+    
+    init() {}
+    
+    init(
+        id: UUID? = nil,
+        neighbours: [Station],
+        name: String,
+        line_color: String,
+        svg_id: String
+    ) {
+        self.id = id
+        self.name = name
+        self.line_color = line_color
+        self.svg_id = svg_id
+    }
+}

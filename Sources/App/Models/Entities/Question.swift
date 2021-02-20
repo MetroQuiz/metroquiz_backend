@@ -1,0 +1,59 @@
+import Vapor
+import Fluent
+
+enum AnswerType: String, Codable {
+    case number
+    case pharse
+    case word
+    case order
+}
+
+enum QuestionType: String, Codable {
+    case admin
+    case teacher
+}
+
+final class Question: Model {
+    static let schema = "questions"
+    
+    @ID(key: .id)
+    var id: UUID?
+    
+    @Parent(key: "author_id")
+    var author_id: User
+    
+    @Enum(key: "question_type")
+    var question_type: QuestionType
+    
+    @Field(key: "station")
+    var station: String
+    
+    @Field(key: "text_question")
+    var text_question: String
+    
+    @Enum(key: "answer_type")
+    var answer_type: AnswerType
+    
+    @Field(key: "answer")
+    var answer: String
+    
+    init() {}
+    
+    init(
+        id: UUID? = nil,
+        author: User,
+        question_type: QuestionType,
+        station: String,
+        text_question: String,
+        answer_type: AnswerType,
+        answer: String
+    ) throws {
+        self.id = id
+        self.$author_id.id = try author.requireID()
+        self.question_type = question_type
+        self.station = station
+        self.text_question = text_question
+        self.answer_type = answer_type
+        self.answer = answer
+    }
+}

@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "vapor-auth-template",
+    name: "metro_quiz",
     platforms: [
        .macOS(.v10_15),
     ],
@@ -18,7 +18,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/jwt.git", from: "4.0.0-rc.2"),
         .package(url: "https://github.com/vapor/queues.git", from: "1.0.0"),
         .package(url: "https://github.com/vapor/queues-redis-driver.git", from: "1.0.0-rc.1"),
-        
+        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON", from: "4.0.0"),
         // Mailgun
         .package(url: "https://github.com/vapor-community/mailgun.git", from: "5.0.0")
     ],
@@ -29,7 +29,8 @@ let package = Package(
             .product(name: "Vapor", package: "vapor"),
             .product(name: "JWT", package: "jwt"),
             .product(name: "QueuesRedisDriver", package: "queues-redis-driver"),
-            .product(name: "Mailgun", package: "mailgun")
+            .product(name: "Mailgun", package: "mailgun"),
+            .product(name: "SwiftyJSON", package: "SwiftyJSON")
         ]),
         .target(name: "Run", dependencies: [
             .target(name: "App"),
