@@ -25,8 +25,8 @@ final class Question: Model {
     @Enum(key: "question_type")
     var question_type: QuestionType
     
-    @Field(key: "station")
-    var station: String
+    @Parent(key: "station")
+    var station: Station
     
     @Field(key: "text_question")
     var text_question: String
@@ -43,7 +43,7 @@ final class Question: Model {
         id: UUID? = nil,
         author: User,
         question_type: QuestionType,
-        station: String,
+        station: Station,
         text_question: String,
         answer_type: AnswerType,
         answer: String

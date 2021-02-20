@@ -4,12 +4,12 @@ struct QuestionRequest: Content {
     let id: UUID?
     let author_id: User
     let question_type: QuestionType
-    let station: String
+    let station: Station
     let text_question: String
     let answer_type: AnswerType
     let answer: String
     
-    init(id: UUID? = nil, author_id: User, question_type: QuestionType, station: String, text_question: String, answer_type: AnswerType, answer: String) {
+    init(id: UUID? = nil, author_id: User, question_type: QuestionType, station: Station, text_question: String, answer_type: AnswerType, answer: String) {
         self.id = id
         self.author_id = author_id
         self.question_type = question_type
