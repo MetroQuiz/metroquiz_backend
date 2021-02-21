@@ -20,7 +20,7 @@ final class Question: Model {
     var id: UUID?
     
     @Parent(key: "author_id")
-    var author_id: User
+    var author: User
     
     @Enum(key: "question_type")
     var question_type: QuestionType
@@ -41,19 +41,20 @@ final class Question: Model {
     
     init(
         id: UUID? = nil,
-        author: User,
+        author_id: UUID,
         question_type: QuestionType,
-        station: Station,
+        station_id: UUID,
         text_question: String,
         answer_type: AnswerType,
         answer: String
     ) throws {
         self.id = id
-        self.$author_id.id = try author.requireID()
+        self.$author.id = author_id
         self.question_type = question_type
-        self.station = station
+        self.$station.id = station_id
         self.text_question = text_question
         self.answer_type = answer_type
         self.answer = answer
     }
 }
+

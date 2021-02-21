@@ -35,10 +35,10 @@ final class Stage: Model {
     
     init() {}
     
-    init(id: UUID? = nil, origin: Station, destination: Station, stage_type: StageType) throws {
+    init(id: UUID? = nil, origin_id: UUID, destination_id: UUID, stage_type: StageType) {
         self.id = id
-        self.$origin.id = try origin.requireID()
-        self.$destination.id = try destination.requireID()
+        self.$origin.id = origin_id
+        self.$destination.id = destination_id
         self.stage_type = stage_type
     }
     
@@ -67,7 +67,6 @@ final class Station: Model {
     
     init(
         id: UUID? = nil,
-        neighbours: [Station],
         name: String,
         line_color: String,
         svg_id: String
