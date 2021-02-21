@@ -10,4 +10,5 @@ func migrations(_ app: Application) throws {
     app.migrations.add(CreateQuestion())
     app.migrations.add(AddQuestionType())
     app.migrations.add(AddQuestionAuthor())
+    app.migrations.add(CreateGame())
 }
