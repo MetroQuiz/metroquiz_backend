@@ -6,8 +6,8 @@ func migrations(_ app: Application) throws {
     app.migrations.add(CreateRefreshToken())
     app.migrations.add(CreateEmailToken())
     app.migrations.add(CreatePasswordToken())
+    app.migrations.add(CreateStationsAndStages())
     app.migrations.add(CreateQuestion())
     app.migrations.add(AddQuestionType())
     app.migrations.add(AddQuestionAuthor())
-    app.migrations.add(CreateStationsAndStages())
 }

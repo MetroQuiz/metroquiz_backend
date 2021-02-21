@@ -22,7 +22,7 @@ struct QuestionRequest: Content {
 
 extension Question {
     convenience init(from questionRequest: QuestionRequest) throws {
-        try self.init(author_id: questionRequest.author_id, question_type: .admin, station_id: questionRequest.station_id, text_question: questionRequest.text_question, answer_type: questionRequest.answer_type, answer: questionRequest.answer)
+        self.init(author_id: questionRequest.author_id, question_type: .admin, station_id: questionRequest.station_id, text_question: questionRequest.text_question, answer_type: questionRequest.answer_type, answer: questionRequest.answer)
     }
 }
 

@@ -13,9 +13,10 @@ enum QuestionType: String, Codable {
     case teacher
 }
 
+
 final class Question: Model {
     static let schema = "questions"
-    
+        
     @ID(key: .id)
     var id: UUID?
     
@@ -25,7 +26,7 @@ final class Question: Model {
     @Enum(key: "question_type")
     var question_type: QuestionType
     
-    @Parent(key: "station")
+    @Parent(key: "station_id")
     var station: Station
     
     @Field(key: "text_question")
@@ -39,15 +40,7 @@ final class Question: Model {
     
     init() {}
     
-    init(
-        id: UUID? = nil,
-        author_id: UUID,
-        question_type: QuestionType,
-        station_id: UUID,
-        text_question: String,
-        answer_type: AnswerType,
-        answer: String
-    ) throws {
+    init(id: UUID? = nil, author_id: UUID, question_type: QuestionType, station_id: UUID, text_question: String, answer_type: AnswerType, answer: String) {
         self.id = id
         self.$author.id = author_id
         self.question_type = question_type

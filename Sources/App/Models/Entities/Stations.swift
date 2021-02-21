@@ -54,6 +54,9 @@ final class Station: Model {
     @Siblings(through: Stage.self, from: \.$origin, to: \.$destination)
     var neighbours: [Station]
     
+    @Children(for: \.$station)
+    var questions: [Question]
+    
     @Field(key: "name")
     var name: String
     
