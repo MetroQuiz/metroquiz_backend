@@ -6,6 +6,8 @@ struct QuestionsController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
         routes.group(UserAuthenticator()) { authenticated in
             authenticated.post("", use: add)
+            authenticated.patch("", use: change)
+            authenticated.delete("", use: delete)
             authenticated.get("by_station", use: getByStation)
         }
     }
