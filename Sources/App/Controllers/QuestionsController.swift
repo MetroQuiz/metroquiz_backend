@@ -34,7 +34,7 @@ struct QuestionsController: RouteCollection {
     func change(_ req: Request) throws -> EventLoopFuture<HTTPStatus> {
         let new_question = try req.content.decode(QuestionRequestEdit.self)
         let payload = try req.auth.require(Payload.self)
-        return Question.query(on: req.db).filter(\.$author.$id == payload.userID).filter(\.$id == new_question.question_id.unwrap()).first().unwrap(or: Abort(.notFound)).flatMap { question -> EventLoopFuture<HTTPStatus> in
+        return Question.query(on: req.db).filter(\.$author.$id == payload.userID).filter(\.$id == new_question.question_id).first().unwrap(or: Abort(.notFound)).flatMap { question -> EventLoopFuture<HTTPStatus> in
             question.$station.id = new_question.station_id
             question.text_question = new_question.text_question
             question.answer_type = new_question.answer_type
@@ -63,8 +63,8 @@ struct QuestionsController: RouteCollection {
 
     func getByID_admin(_ req: Request) throws -> EventLoopFuture<QuestionRequest> {
         let question_id = try req.content.decode(UUID.self)
-        return Question.query(on: req.db).with(\.$station).filter(\.$id == question_id).first().unwrap(or: Abort(.notFound)).map { question in
-            question.asQuestionRequest()
+        return Question.query(on: req.db).with(\.$station).filter(\.$id == question_id).first().unwrap(or: Abort(.notFound)).flatMapThrowing { question in
+            try question.asQuestionRequest()
         }
     }
 }
