@@ -50,13 +50,13 @@ extension Question {
 }
 
 struct QuestionRequestEdit: Content {
-    let question_id: UUID?
+    let question_id: UUID
     let station_id: UUID
     let text_question: String
     let answer_type: AnswerType
     let answer: String
 
-    init(question_id: UUID?, station_id: UUID, text_question: String, answer_type: AnswerType, answer: String) {
+    init(question_id: UUID, station_id: UUID, text_question: String, answer_type: AnswerType, answer: String) {
         self.question_id = question_id
         self.station_id = station_id
         self.text_question = text_question
@@ -66,7 +66,7 @@ struct QuestionRequestEdit: Content {
 }
 
 extension Question {
-    func asQuestionEdit() -> QuestionRequestEdit {
-        return QuestionRequestEdit(question_id: self.id, station_id: self.$station.id, text_question: self.text_question, answer_type: self.answer_type, answer: self.answer)
+    func asQuestionEdit() throws -> QuestionRequestEdit {
+        return QuestionRequestEdit(question_id: try self.requireID(), station_id: self.$station.id, text_question: self.text_question, answer_type: self.answer_type, answer: self.answer)
     }
 }
