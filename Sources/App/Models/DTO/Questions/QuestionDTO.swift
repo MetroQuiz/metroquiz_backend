@@ -1,28 +1,28 @@
 import Vapor
 
 struct QuestionRequest: Content {
+    let author_id: UUID
     let station_id: UUID
     let text_question: String
     let answer_type: AnswerType
     let answer: String
     
-    init(station_id: UUID, text_question: String, answer_type: AnswerType, answer: String) {
+    init(author_id: UUID,  question_type: QuestionType, station_id: UUID, text_question: String, answer_type: AnswerType, answer: String) {
+        self.author_id = author_id
         self.station_id = station_id
         self.text_question = text_question
         self.answer_type = answer_type
         self.answer = answer
     }
-}
-
-extension Question {
-    convenience init(from questionRequest: QuestionRequest, author_id: UUID) throws {
-        self.init(author_id: author_id, question_type: .admin, station_id: questionRequest.station_id, text_question: questionRequest.text_question, answer_type: questionRequest.answer_type, answer: questionRequest.answer)
+    
+    init(from question: Question) throws {
+        self.init(author_id: question.$author.id, question_type: question.question_type, station_id: question.$station.id, text_question: question.text_question, answer_type: question.answer_type, answer: question.answer)
     }
 }
 
 extension Question {
-    func asQuestionRequest() -> QuestionRequest {
-        return QuestionRequest(station_id: self.$station.id, text_question: self.text_question, answer_type: self.answer_type, answer: self.answer)
+    convenience init(from questionRequest: QuestionRequest) throws {
+        self.init(author_id: questionRequest.author_id, question_type: .admin, station_id: questionRequest.station_id, text_question: questionRequest.text_question, answer_type: questionRequest.answer_type, answer: questionRequest.answer)
     }
 }
 
@@ -36,7 +36,7 @@ struct QuestionResponse: Content {
         self.text_question = text_question
         self.answer_type = answer_type
     }
-
+    
     init(from question: Question) {
         self.init(id: question.id, text_question: question.text_question, answer_type: question.answer_type)
     }
@@ -46,27 +46,5 @@ struct QuestionResponse: Content {
 extension Question {
     func asQuestionResponse() -> QuestionResponse {
         return QuestionResponse(id: self.id, text_question: self.text_question, answer_type: self.answer_type)
-    }
-}
-
-struct QuestionRequestEdit: Content {
-    let question_id: UUID?
-    let station_id: UUID
-    let text_question: String
-    let answer_type: AnswerType
-    let answer: String
-
-    init(question_id: UUID?, station_id: UUID, text_question: String, answer_type: AnswerType, answer: String) {
-        self.question_id = question_id
-        self.station_id = station_id
-        self.text_question = text_question
-        self.answer_type = answer_type
-        self.answer = answer
-    }
-}
-
-extension Question {
-    func asQuestionEdit() -> QuestionRequestEdit {
-        return QuestionRequestEdit(question_id: self.id, station_id: self.$station.id, text_question: self.text_question, answer_type: self.answer_type, answer: self.answer)
     }
 }
