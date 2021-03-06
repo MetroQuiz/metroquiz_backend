@@ -9,13 +9,15 @@ struct QuestionsController: RouteCollection {
             authenticated.patch("", use: change)
             authenticated.delete("", use: delete)
             authenticated.get("by_station", use: getByStation)
+            authenticated.get("by_id", use: getByID)
+            authenticated.get("by_id_admin", use: getByID_admin)
         }
     }
     
     func add(_ req: Request) throws -> EventLoopFuture<QuestionResponse> {
-        let author_id = try req.auth.require(Payload.self).userID
+        let author_id = try req.auth.require(Payload.self)
         let question_data = try req.content.decode(QuestionRequest.self)
-        let question = try Question.init(from: question_data, author_id: author_id)
+        let question = try Question.init(from: question_data, author_id: author_id.userID)
         return question.create(on: req.db).map {
             question.asQuestionResponse()
         }
@@ -29,16 +31,16 @@ struct QuestionsController: RouteCollection {
         }.transform(to: .ok)
     }
 
-    func change(_ req: Request) throws -> EventLoopFuture<QuestionResponse> {
+    func change(_ req: Request) throws -> EventLoopFuture<HTTPStatus> {
         let new_question = try req.content.decode(QuestionRequestEdit.self)
         let payload = try req.auth.require(Payload.self)
-        return Question.query(on: req.db).filter(\.$author.$id == payload.userID).filter(\.$id == new_question.question_id.unwrap()).first().unwrap(or: Abort(.notFound)).flatMap { question -> EventLoopFuture<QuestionResponse> in
+        return Question.query(on: req.db).filter(\.$author.$id == payload.userID).filter(\.$id == new_question.question_id.unwrap()).first().unwrap(or: Abort(.notFound)).flatMap { question -> EventLoopFuture<HTTPStatus> in
             question.$station.id = new_question.station_id
             question.text_question = new_question.text_question
             question.answer_type = new_question.answer_type
             question.answer = new_question.answer
-            return question.update(on: req.db).map { _ -> QuestionResponse in
-                return question.asQuestionREsponse()
+            return question.update(on: req.db).map { _ in
+                HTTPStatus.ok
             }
         }
     }

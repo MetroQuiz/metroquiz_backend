@@ -1,16 +1,14 @@
 import Vapor
 
 struct QuestionRequest: Content {
-    let question_type: QuestionType
     let station_id: UUID
     let text_question: String
     let answer_type: AnswerType
     let answer: String
     
-    init(question_type: QuestionType, station_id: UUID, text_question: String, answer_type: AnswerType, answer: String) {
+    init(station_id: UUID, text_question: String, answer_type: AnswerType, answer: String) {
         self.station_id = station_id
         self.text_question = text_question
-        self.question_type = question_type
         self.answer_type = answer_type
         self.answer = answer
     }
@@ -24,7 +22,7 @@ extension Question {
 
 extension Question {
     func asQuestionRequest() -> QuestionRequest {
-        return QuestionRequest(question_type: self.question_type, station_id: self.$station.id, text_question: self.text_question, answer_type: self.answer_type, answer: self.answer)
+        return QuestionRequest(station_id: self.$station.id, text_question: self.text_question, answer_type: self.answer_type, answer: self.answer)
     }
 }
 
