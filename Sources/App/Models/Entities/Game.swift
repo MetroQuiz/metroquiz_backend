@@ -111,6 +111,31 @@ final class StationAvailability: Model {
     
 }
 
+
+final class GameQuestion: Model {
+    static let schema = "game_questions"
+    
+    @ID(key: .id)
+    var id: UUID?
+    
+    @Parent(key: "question")
+    var question: Question
+    
+    @Parent(key: "game")
+    var game: Game
+    
+    
+    init() {}
+    
+    init(id: UUID? = nil, question_id: UUID, game_id: UUID) {
+        self.id = id
+        self.$question.id = question_id
+        self.$game.id = game_id
+    }
+    
+}
+
+
 final class Game: Model {
     static let schema = "games"
         
@@ -128,12 +153,12 @@ final class Game: Model {
     
     @Parent(key: "destination_id")
     var destination: Station
-    
+        
     @Enum(key: "state")
     var status: GameStatus
     
-    @Children(for: \.$game)
-    var participants: [Participant]
+    @Siblings(through: GameQuestion.self, from: \.$game, to: \.$question)
+    var questions: [Question]
     
     init() {}
     
@@ -144,6 +169,30 @@ final class Game: Model {
         self.$origin.id = origin_id
         self.$destination.id = destination_id
         self.status = status
+    }
+    
+    static func generatePin() -> String {
+        var result = ""
+        for _ in 0..<8 {
+            result.append(String(Int.random(in: 1...9)))
+        }
+        return result
+    }
+    
+    init(from gameCreation: GameCreation, author_id: UUID, db: Database) {
+        self.$author.id = author_id
+        self.$destination.id = gameCreation.destination_id
+        self.$origin.id = gameCreation.origin_id
+        self.pin = Game.generatePin()
+        self.status = .preparing
+        Question.query(on: db).all().flatMap { questions -> EventLoopFuture<Void> in
+            var result = [UUID?: Question]()
+            
+            for question in questions.shuffled() {
+                result[question.id] = question
+            }
+            return self.$questions.attach(Array(result.values), on: db)
+        }
     }
     
 }
