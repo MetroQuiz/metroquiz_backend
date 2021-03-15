@@ -54,7 +54,7 @@ struct CreateGame: Migration {
     func revert(on database: Database) -> EventLoopFuture<Void> {
         return [database.schema(StationAvailability.schema).delete().flatMap {
             database.enum("availability_level").delete()
-        }].flatten(on: database.eventLoop).flatMap {
+        }, database.schema(Answer.schema).delete()].flatten(on: database.eventLoop).flatMap {
             database.schema(Participant.schema).delete()
         }.flatMap {
             database.schema(Game.schema).delete()
