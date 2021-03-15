@@ -185,11 +185,11 @@ final class Game: Model {
         self.$origin.id = gameCreation.origin_id
         self.pin = Game.generatePin()
         self.status = .preparing
-        Question.query(on: db).all().flatMap { questions -> EventLoopFuture<Void> in
+        Question.query(on: db).with(\.$station).all().flatMap { questions -> EventLoopFuture<Void> in
             var result = [UUID?: Question]()
             
             for question in questions.shuffled() {
-                result[question.id] = question
+                result[question.station.id] = question
             }
             return self.$questions.attach(Array(result.values), on: db)
         }
