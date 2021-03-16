@@ -7,6 +7,7 @@ env:
   SITE_FRONTEND_URL: test
   NO_REPLY_EMAIL: test
   POSTGRES_HOSTNAME: postgres
+  MAP_PATH: map_parsing/map.json
 jobs:
   xenial:
     container: 
@@ -21,6 +22,14 @@ jobs:
           POSTGRES_PASSWORD: password
     steps:
     - uses: actions/checkout@v1
+    - name: Setup python3
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install python depency
+      run: python3 -m pip install bs4 cssutils tinycss2 soupsieve webencodings
+    - name: Generate map for testing
+      run: python3 map_parsing/parse_html.py
     - run: swift test --enable-test-discovery --sanitize=thread
   bionic:
     container: 
@@ -35,4 +44,12 @@ jobs:
           POSTGRES_PASSWORD: password
     steps:
     - uses: actions/checkout@v1
+    - name: Setup python3
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install python depency
+      run: python3 -m pip install bs4 cssutils tinycss2 soupsieve webencodings
+    - name: Generate map for testing
+      run: python3 map_parsing/parse_html.py
     - run: swift test --enable-test-discovery --sanitize=thread
