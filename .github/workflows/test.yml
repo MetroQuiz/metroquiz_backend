@@ -29,7 +29,8 @@ jobs:
     - name: Install python depency
       run: python3 -m pip install bs4 cssutils tinycss2 soupsieve webencodings
     - name: Generate map for testing
-      run: python3 map_parsing/parse_html.py
+      working-directory: ./map_parsing
+      run: python3 parse_html.py
     - run: swift test --enable-test-discovery --sanitize=thread
   bionic:
     container: 
@@ -51,5 +52,6 @@ jobs:
     - name: Install python depency
       run: python3 -m pip install bs4 cssutils tinycss2 soupsieve webencodings
     - name: Generate map for testing
-      run: python3 map_parsing/parse_html.py
+      working-directory: ./map_parsing
+      run: python3 parse_html.py
     - run: swift test --enable-test-discovery --sanitize=thread
