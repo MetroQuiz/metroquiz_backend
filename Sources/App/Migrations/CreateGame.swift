@@ -14,7 +14,7 @@ struct CreateGame: Migration {
         return database.enum("game_state").case("preparing").case("lobby").case("in_process").case("end").create().flatMap { game_state in
             database.schema(Game.schema)
                 .id()
-                .field("user_id", .uuid, .required, .references("users", "id", onDelete: .cascade))
+                .field("author_id", .uuid, .required, .references("users", "id", onDelete: .cascade))
                 .field("pin", .string, .required)
                 .field("origin_id", .uuid, .required, .references("stations", "id", onDelete: .cascade))
                 .field("destination_id", .uuid, .required, .references("stations", "id", onDelete: .cascade))
