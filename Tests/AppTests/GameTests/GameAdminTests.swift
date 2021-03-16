@@ -188,40 +188,6 @@ final class GameAdminTests: XCTestCase {
         })
     }
     
-    func testIlligalView() throws {
-        let stations = try Station.query(on: app.db).all().wait()
-        let gameCreation = try GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
-        let payload = try Payload(with: user)
-        let accessToken = try app.jwt.signers.sign(payload)
-        var headers = HTTPHeaders()
-        headers.add(name: "Authorization", value: "Bearer \(accessToken)")
-        
-        try app.test(.POST, adminPath, headers: authHeaders, beforeRequest: { req in
-            try req.content.encode(gameCreation)
-        }, afterResponse: { res in
-            XCTAssertEqual(res.status, .ok)
-            try XCTAssertContent(GameAdminResponse.self, res) { game in
-                XCTAssertEqual(game.status, .preparing)
-                XCTAssertTrue(try! NSRegularExpression(pattern: "[0-9]{8}").matches(game.pin))
-                XCTAssertEqual(game.origin_id, stations[0].id!)
-                XCTAssertEqual(game.destination_id, stations[1].id!)
-                let stations = try Station.query(on: app.db).all().wait()
-                
-                let hacker = User(fullName: "Hacker User", email: "hacker@hacker.com", passwordHash: "123", isAdmin: true)
-                try hacker.save(on: self.app.db).wait()
-                let gameUUID = GameUUID(game_id: game.id!)
-                try app.test(.GET, adminPath, headers: self.getHeadersByUser(hacker), beforeRequest: { req in
-                    try req.content.encode(gameUUID)
-                }, afterResponse: { res in
-                    XCTAssertEqual(res.status, .forbidden)
-                    
-                })
-            }
-            
-        })
-    }
-    
-    
     func testIlligal() throws {
         let stations = try Station.query(on: app.db).all().wait()
         let gameCreation = try GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
