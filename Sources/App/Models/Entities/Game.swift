@@ -2,7 +2,7 @@ import Vapor
 import Fluent
 
 
-enum GameStatus: String, Codable {
+enum GameStatus: String, Codable, Content {
     case preparing
     case lobby
     case in_process
