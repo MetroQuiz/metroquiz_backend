@@ -21,7 +21,7 @@ final class GameAdminTests: XCTestCase {
         try configure(app)
         testWorld = try TestWorld(app: app)
         try self.testWorld.prepareStationsAndQuestions()
-        self.user = User(fullName: "Test User", email: "test@test.com", passwordHash: "123", isAdmin: true)
+        self.user = User(fullName: "Test User", email: "game@test.com", passwordHash: "123", isAdmin: true)
         try self.user.save(on: self.app.db).wait()
         try self.authHeaders = getHeadersByUser(self.user)
     }
