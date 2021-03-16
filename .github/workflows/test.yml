@@ -17,7 +17,7 @@ jobs:
         image: postgres
         env:
           POSTGRES_USER: vapor
-          POSTGRES_DB: vapor
+          POSTGRES_DB: metroquiz_testing
           POSTGRES_PASSWORD: password
     steps:
     - uses: actions/checkout@v1
@@ -31,7 +31,7 @@ jobs:
         image: postgres
         env:
           POSTGRES_USER: vapor
-          POSTGRES_DB: vapor
+          POSTGRES_DB: metroquiz_testing
           POSTGRES_PASSWORD: password
     steps:
     - uses: actions/checkout@v1
