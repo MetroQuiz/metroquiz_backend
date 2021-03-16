@@ -19,8 +19,7 @@ class TestWorld {
     
     init(app: Application) throws {
         self.app = app
-        try app.autoRevert().wait()
-        try app.autoMigrate().wait()
+
 
         try app.jwt.signers.use(.es256(key: .generate()))
         

@@ -20,13 +20,15 @@ final class GameAdminTests: XCTestCase {
         app = Application(.testing)
         try configure(app)
         testWorld = try TestWorld(app: app)
+        try app.autoMigrate().wait()
         try self.testWorld.prepareStationsAndQuestions()
         self.user = User(fullName: "Test User", email: "game@test.com", passwordHash: "123", isAdmin: true)
         try self.user.save(on: self.app.db).wait()
         try self.authHeaders = getHeadersByUser(self.user)
     }
     
-    override func tearDown() {
+    override func tearDownWithError() throws {
+        try app.autoRevert().wait()
         app.shutdown()
     }
     
