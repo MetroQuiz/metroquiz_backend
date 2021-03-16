@@ -20,20 +20,21 @@ struct IncludeMap: Command {
         "Command to include map"
     }
     
-    func run(using context: CommandContext, signature: Signature) throws {
-        let path = context.application.directory.workingDirectory + signature.map_file
-        print("📰 Reading map from \(path) file...")
+    
+    static func run(application: Application, map_file: String, print_callback: @escaping (String) -> Void) throws {
+        let path = application.directory.workingDirectory + map_file
+        print_callback("📰 Reading map from \(path) file...")
         do {
             let contents = try String(contentsOfFile: path, encoding: .utf8)
             if let data = contents.data(using: .utf8) {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:AnyObject]
                     
-                    context.console.print("❌ Remove old map...")
-                    try Station.query(on: context.application.db).delete().flatMap {
-                        Stage.query(on: context.application.db).delete()
+                    print_callback("❌ Remove old map...")
+                    try Station.query(on: application.db).delete().flatMap {
+                        Stage.query(on: application.db).delete()
                     }.flatMap { _ -> EventLoopFuture<Void> in
-                        context.console.print("⚙️ Creating stations...")
+                        print_callback("⚙️ Creating stations...")
                         var stages = [String:[(type: StageType, to: String)]]()
                         var stations = [EventLoopFuture<Void>]()
                         if let keys = json?.keys {
@@ -42,7 +43,7 @@ struct IncludeMap: Command {
                                     if let name = station["name"] as? String,
                                        let color = station["color"] as? String,
                                        let neighbours = station["neighbours"] as? [String:[String]] {
-                                        if let changes = neighbours["Change"]
+                                        if let changes = neighbours["change"]
                                         {
                                             if (stages[key] == nil) {
                                                 stages[key] = []
@@ -51,7 +52,7 @@ struct IncludeMap: Command {
                                                 stages[key]?.append((type: StageType.change, to: change))
                                             }
                                         }
-                                        if let spans = neighbours["Span"]
+                                        if let spans = neighbours["span"]
                                         {
                                             if (stages[key] == nil) {
                                                 stages[key] = []
@@ -60,7 +61,7 @@ struct IncludeMap: Command {
                                                 stages[key]?.append((type: StageType.span, to: span))
                                             }
                                         }
-                                        if let grounds = neighbours["Ground_change"]
+                                        if let grounds = neighbours["ground_change"]
                                         {
                                             if (stages[key] == nil) {
                                                 stages[key] = []
@@ -70,21 +71,21 @@ struct IncludeMap: Command {
                                             }
                                         }
                                         
-                                        stations.append(Station(name: name, line_color: color, svg_id: key).create(on: context.application.db))
+                                        stations.append(Station(name: name, line_color: color, svg_id: key).create(on: application.db))
                                         
                                     }
                                 }
                             }
                         }
-                        return stations.flatten(on: context.application.eventLoopGroup.next()).flatMap { _ -> EventLoopFuture<Void> in
-                            context.console.print("⚙️ Creating stages...")
+                        return stations.flatten(on: application.eventLoopGroup.next()).flatMap { _ -> EventLoopFuture<Void> in
+                            print_callback("⚙️ Creating stages...")
                             var stages_result = [EventLoopFuture<Void>]()
                             for (origin_svg_id, destinations_data) in stages {
                                 for destination_data in destinations_data {
                                     stages_result.append(
-                                        [Station.query(on: context.application.db).filter(\.$svg_id == origin_svg_id).first().unwrap(or: Abort(.notFound)),
-                                         Station.query(on: context.application.db).filter(\.$svg_id == destination_data.to).first().unwrap(or: Abort(.notFound))]
-                                            .flatten(on: context.application.eventLoopGroup.next())
+                                        [Station.query(on: application.db).filter(\.$svg_id == origin_svg_id).first().unwrap(or: Abort(.notFound)),
+                                         Station.query(on: application.db).filter(\.$svg_id == destination_data.to).first().unwrap(or: Abort(.notFound))]
+                                            .flatten(on: application.eventLoopGroup.next())
                                             .flatMap { stations -> EventLoopFuture<Void> in
                                                 var origin_station = stations[0]
                                                 var destination_station = stations[1]
@@ -94,27 +95,32 @@ struct IncludeMap: Command {
                                                 if let origin_id = origin_station.id,
                                                    let destination_id = destination_station.id {
 
-                                                    return Stage(origin_id: origin_id, destination_id: destination_id, stage_type: destination_data.type).create(on: context.application.db)
+                                                    return Stage(origin_id: origin_id, destination_id: destination_id, stage_type: destination_data.type).create(on: application.db)
                                                 }
                                                 else {
-                                                    context.console.print("Ooopps! Stations isn't exists")
-                                                    return context.application.eventLoopGroup.next().makeFailedFuture(Abort(.notFound))
+                                                    print_callback("Ooopps! Stations isn't exists")
+                                                    return application.eventLoopGroup.next().makeFailedFuture(Abort(.notFound))
                                                 }
                                             })
                                 }
                             }
-                            return stages_result.flatten(on: context.application.eventLoopGroup.next())
+                            return stages_result.flatten(on: application.eventLoopGroup.next())
                         }
                     }.wait()
                     
                     
                 } catch {
-                    context.console.print("Something went wrong")
+                    print_callback("Something went wrong")
                 }
             }
         }
         catch let error as NSError {
-            context.console.print("Ooops! Something went wrong: \(error)")
+            print_callback("Ooops! Something went wrong: \(error)")
+        }
+    }
+    func run(using context: CommandContext, signature: Signature) throws {
+        try IncludeMap.run(application: context.application, map_file: signature.map_file) { text in
+            context.console.print(text)
         }
     }
 }
