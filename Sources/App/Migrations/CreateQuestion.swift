@@ -6,7 +6,7 @@ struct CreateQuestion: Migration {
         return database.enum("answer_type").case("number").case("word").case("pharse").case("order").create().flatMap { answer_type in
             database.schema("questions")
                 .id()
-                .field("station", .string, .required)
+                .field("text_question", .string, .required)
                 .field("station_id", .uuid, .required, .references("stations", "id", onDelete: .cascade))
                 .field("answer_type", answer_type, .required)
                 .field("answer", .string, .required)

@@ -5,5 +5,6 @@ func routes(_ app: Application) throws {
     app.group("api") { api in
         // Authentication
         try! api.register(collection: AuthenticationController())
+        try! api.register(collection: GameAdminController())
     }
 }
