@@ -12,12 +12,16 @@ public func configure(_ app: Application) throws {
     
     // MARK: Database
     // Configure PostgreSQL database
+    var databaseName: String? = nil
+    if app.environment == .testing {
+        databaseName = "metroquiz_testing"
+    }
     app.databases.use(
         .postgres(
             hostname: Environment.get("POSTGRES_HOSTNAME") ?? "localhost",
             username: Environment.get("POSTGRES_USERNAME") ?? "vapor",
             password: Environment.get("POSTGRES_PASSWORD") ?? "password",
-            database: Environment.get("POSTGRES_DATABASE") ?? "vapor"
+            database: databaseName ?? (Environment.get("POSTGRES_DATABASE") ?? "vapor")
         ), as: .psql)
         
     // MARK: Middleware
