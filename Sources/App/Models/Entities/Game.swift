@@ -118,10 +118,10 @@ final class GameQuestion: Model {
     @ID(key: .id)
     var id: UUID?
     
-    @Parent(key: "question")
+    @Parent(key: "question_id")
     var question: Question
     
-    @Parent(key: "game")
+    @Parent(key: "game_id")
     var game: Game
     
     
@@ -179,19 +179,19 @@ final class Game: Model {
         return result
     }
     
-    init(from gameCreation: GameCreation, author_id: UUID, db: Database) {
-        self.$author.id = author_id
-        self.$destination.id = gameCreation.destination_id
-        self.$origin.id = gameCreation.origin_id
-        self.pin = Game.generatePin()
-        self.status = .preparing
-        Question.query(on: db).with(\.$station).all().flatMap { questions -> EventLoopFuture<Void> in
-            var result = [UUID?: Question]()
-            
-            for question in questions.shuffled() {
-                result[question.station.id] = question
+    static func fromGameCreation(from gameCreation: GameCreation, author_id: UUID, db: Database) -> EventLoopFuture<Game> {
+        let newGame = Game(author_id: author_id, pin: Game.generatePin(), origin_id: gameCreation.origin_id, destination_id: gameCreation.destination_id, status: .preparing)
+        return newGame.save(on: db).flatMap { _ in
+            return Question.query(on: db).with(\.$station).all().flatMap { questions -> EventLoopFuture<Void> in
+                var result = [UUID?: Question]()
+                
+                for question in questions.shuffled() {
+                    result[question.station.id] = question
+                }
+                return newGame.$questions.attach(Array(result.values), on: db)
+            }.map {
+                newGame
             }
-            return self.$questions.attach(Array(result.values), on: db)
         }
     }
     
