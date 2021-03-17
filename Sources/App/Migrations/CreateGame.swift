@@ -19,6 +19,7 @@ struct CreateGame: Migration {
                 .field("origin_id", .uuid, .required, .references("stations", "id", onDelete: .cascade))
                 .field("destination_id", .uuid, .required, .references("stations", "id", onDelete: .cascade))
                 .field("state", game_state, .required)
+                .unique(on: "pin")
                 .create()
             
         }.flatMap {
