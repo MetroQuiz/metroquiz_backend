@@ -54,6 +54,7 @@ struct GameAdminResponse: Content {
     }
 }
 
+
 struct GameStatusResponse: Content {
     let status: GameStatus
     
