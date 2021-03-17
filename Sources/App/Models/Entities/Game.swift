@@ -16,7 +16,7 @@ enum AvailabilityLevel: String, Codable {
 }
 
 
-final class Participant: Model {
+final class Participant: Model, Authenticatable {
     static let schema = "participants"
     
     @ID(key: .id)
@@ -39,7 +39,7 @@ final class Participant: Model {
     
     init() {}
     
-    init(id : UUID? = nil, token: String, tickets: UInt, score: UInt, train_fullness: UInt, game_id: UUID) {
+    init(id : UUID? = nil, token: String = Participant.generateToken(), tickets: UInt, score: UInt, train_fullness: UInt, game_id: UUID) {
         self.id = id
         self.token = token
         self.tickets = tickets
@@ -48,6 +48,10 @@ final class Participant: Model {
         self.$game.id = game_id
     }
     
+    static func generateToken() -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<8).map{ _ in letters.randomElement()! })
+    }
 }
 
 
