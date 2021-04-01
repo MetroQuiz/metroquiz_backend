@@ -70,3 +70,19 @@ extension Question {
         return QuestionRequestEdit(question_id: try self.requireID(), station_id: self.$station.id, text_question: self.text_question, answer_type: self.answer_type, answer: self.answer)
     }
 }
+
+struct QuestionId: Content {
+    let question_id: UUID
+
+    init(question_id: UUID) {
+        self.question_id = question_id
+    }
+}
+
+struct StationId: Content {
+    let station_id: UUID
+
+    init(station_id: UUID) {
+        self.station_id = station_id
+    }
+}

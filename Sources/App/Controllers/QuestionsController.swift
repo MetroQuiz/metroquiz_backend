@@ -4,27 +4,26 @@ import Fluent
 
 struct QuestionsController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
-        routes.group(UserAuthenticator()) { authenticated in
+        routes.grouped("question").group(UserAuthenticator()) { authenticated in
             authenticated.post("", use: add)
             authenticated.patch("", use: change)
             authenticated.delete("", use: delete)
             authenticated.get("by_station", use: getByStation)
-            authenticated.get("by_id", use: getByID)
-            authenticated.get("by_id_admin", use: getByID_admin)
+            authenticated.get("", use: getByID_admin)
         }
     }
     
     func add(_ req: Request) throws -> EventLoopFuture<QuestionResponse> {
         let author_id = try req.auth.require(Payload.self)
         let question_data = try req.content.decode(QuestionRequest.self)
-        let question = try Question.init(from: question_data, author_id: author_id.userID)
+        let question = try Question(from: question_data, author_id: author_id.userID)
         return question.create(on: req.db).map {
             question.asQuestionResponse()
         }
     }
 
     func delete(_ req: Request) throws -> EventLoopFuture<HTTPStatus> {
-        let question_id = try req.content.decode(UUID.self)
+        let question_id = try req.content.decode(QuestionId.self).question_id
         let payload = try req.auth.require(Payload.self)
         return Question.query(on: req.db).filter(\.$author.$id == payload.userID).filter(\.$id == question_id).first().unwrap(or: Abort(.notFound)).flatMap { question in
             question.delete(on: req.db)
@@ -46,7 +45,7 @@ struct QuestionsController: RouteCollection {
     }
 
     func getByStation(_ req: Request) throws -> EventLoopFuture<[QuestionResponse]> {
-        let station = try req.content.decode(UUID.self)
+        let station = try req.content.decode(StationId.self).station_id
         return Question.query(on: req.db).with(\.$station).filter(\.$station.$id == station).all().map { questions in
             questions.map { question in
                 question.asQuestionResponse()
@@ -55,14 +54,14 @@ struct QuestionsController: RouteCollection {
     }
 
     func getByID(_ req: Request) throws -> EventLoopFuture<QuestionResponse> {
-        let question_id = try req.content.decode(UUID.self)
+        let question_id = try req.content.decode(QuestionId.self).question_id
         return Question.query(on: req.db).with(\.$station).filter(\.$id == question_id).first().unwrap(or: Abort(.notFound)).map { question in
             question.asQuestionResponse()
         }
     }
 
     func getByID_admin(_ req: Request) throws -> EventLoopFuture<QuestionRequest> {
-        let question_id = try req.content.decode(UUID.self)
+        let question_id = try req.content.decode(QuestionId.self).question_id
         return Question.query(on: req.db).with(\.$station).filter(\.$id == question_id).first().unwrap(or: Abort(.notFound)).flatMapThrowing { question in
             try question.asQuestionRequest()
         }
