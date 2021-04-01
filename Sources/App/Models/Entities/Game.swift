@@ -10,6 +10,13 @@ enum GameStatus: String, Codable, Content {
 }
 
 
+enum AnswerVerdict: String, Codable, Content {
+    case ok
+    case wrong_presentation
+    case wrong
+    case no
+}
+
 enum AvailabilityLevel: String, Codable {
     case passed
     case available
@@ -64,8 +71,8 @@ final class Answer: Model {
     @Field(key: "text")
     var text: String
     
-    @Field(key: "is_correct")
-    var is_correct: Bool?
+    @Enum(key: "verdict")
+    var verdict: AnswerVerdict
     
     @Parent(key: "question_id")
     var question: Question
@@ -78,9 +85,9 @@ final class Answer: Model {
     
     init() {}
     
-    init(id: UUID? = nil, is_correct: Bool? = nil, submited_at: Date? = nil, text: String, author_id: UUID, question_id: UUID) {
+    init(id: UUID? = nil, verdict: AnswerVerdict? = nil, submited_at: Date? = nil, text: String, author_id: UUID, question_id: UUID) {
         self.id = id
-        self.is_correct = is_correct
+        self.verdict = verdict ?? .no
         self.submited_at = submited_at
         self.$author.id = author_id
         self.$question.id = question_id
