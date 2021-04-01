@@ -122,17 +122,21 @@ final class GameQuestion: Model {
     @ID(key: .id)
     var id: UUID?
     
+    @Parent(key: "station_id")
+    var station: Station
+    
     @Parent(key: "question_id")
     var question: Question
-    
+
     @Parent(key: "game_id")
     var game: Game
     
     
     init() {}
     
-    init(id: UUID? = nil, question_id: UUID, game_id: UUID) {
+    init(id: UUID? = nil, station_id: UUID, question_id: UUID, game_id: UUID) {
         self.id = id
+        self.$station.id = station_id
         self.$question.id = question_id
         self.$game.id = game_id
     }
@@ -183,16 +187,25 @@ final class Game: Model {
         return result
     }
     
-    static func fromGameCreation(from gameCreation: GameCreation, author_id: UUID, db: Database) -> EventLoopFuture<Game> {
+    static func fromGameCreation(from gameCreation: GameCreation, author_id: UUID, req: Request) -> EventLoopFuture<Game> {
         let newGame = Game(author_id: author_id, pin: Game.generatePin(), origin_id: gameCreation.origin_id, destination_id: gameCreation.destination_id, status: .preparing)
-        return newGame.save(on: db).flatMap { _ in
-            return Question.query(on: db).with(\.$station).all().flatMap { questions -> EventLoopFuture<Void> in
-                var result = [UUID?: Question]()
+        return newGame.save(on: req.db).flatMap { _ in
+            return Question.query(on: req.db).with(\.$station).all().flatMap { questions -> EventLoopFuture<Void> in
+                var result = [UUID: UUID]()
                 
                 for question in questions.shuffled() {
-                    result[question.station.id] = question
+                    if let station_id = question.station.id, let question_id = question.id {
+                        result[station_id] = question_id
+                    }
                 }
-                return newGame.$questions.attach(Array(result.values), on: db)
+                return result.map { (station_id, question_id) in
+                    if let game_id = newGame.id {
+                        return GameQuestion(station_id: station_id, question_id: question_id, game_id: game_id).save(on: req.db)
+                    }
+                    else {
+                        return req.eventLoop.makeFailedFuture(Abort(.conflict))
+                    }
+                }.flatten(on: req.eventLoop)
             }.map {
                 newGame
             }
