@@ -19,6 +19,8 @@ struct CreateGame: Migration {
                 .field("origin_id", .uuid, .required, .references("stations", "id", onDelete: .cascade))
                 .field("destination_id", .uuid, .required, .references("stations", "id", onDelete: .cascade))
                 .field("state", game_state, .required)
+                .field("create_at", .date)
+                .unique(on: "pin")
                 .create()
             
         }.flatMap {
@@ -31,20 +33,22 @@ struct CreateGame: Migration {
                 .field("game_id", .uuid, .required, .references("games", "id", onDelete: .cascade))
                 .create()
         }.flatMap {
-            return [database.schema(Answer.schema)
+            return [database.enum("answer_verdict").case("ok").case("wrong").case("wrong_presentation").create().flatMap { answerVerdict in
+                database.schema(Answer.schema)
                         .id()
                         .field("text", .string, .required)
-                        .field("is_correct", .bool)
+                        .field("verdict", answerVerdict)
                         .field("author_id", .uuid, .required, .references("users", "id", onDelete: .cascade))
                         .field("game_id", .uuid, .required, .references("games", "id", onDelete: .cascade))
                         .field("submited_at", .date)
-                        .create(),
-                    database.enum("availability_level").case("passed").case("available").create().flatMap { availability_level in
+                    .create()},
+                    database.enum("availability_level").case("in_process").case("passed").case("available").create().flatMap { availability_level in
                         database.schema(StationAvailability.schema)
                             .id()
                             .field("participant_id", .uuid, .required, .references("participants", "id", onDelete: .cascade))
                             .field("station_id", .uuid, .required, .references("stations", "id", onDelete: .cascade))
                             .field("level", availability_level, .required)
+                            .field("submited_at", .date)
                             .create()
                     }].flatten(on: database.eventLoop)
         }

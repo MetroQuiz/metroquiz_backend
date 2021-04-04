@@ -13,6 +13,7 @@ struct CreateGameQuestion: Migration {
         return database.schema(GameQuestion.schema)
             .id()
             .field("question_id", .uuid, .references("questions", "id", onDelete: .cascade))
+            .field("station_id", .uuid, .references("stations", "id", onDelete: .cascade))
             .field("game_id", .uuid, .references("games", "id", onDelete: .cascade))
             .create()
             

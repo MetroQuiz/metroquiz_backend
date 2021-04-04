@@ -17,7 +17,7 @@ final class PasswordTokenRepositoryTests: XCTestCase {
     }
     
     override func tearDownWithError() throws {
-        try app.migrator.revertAllBatches().wait()
+        try app.autoRevert().wait()
         app.shutdown()
     }
     

@@ -11,10 +11,12 @@ final class RegisterTests: XCTestCase {
     override func setUpWithError() throws {
         app = Application(.testing)
         try configure(app)
+        try app.autoMigrate().wait()
         self.testWorld = try TestWorld(app: app)
     }
     
-    override func tearDown() {
+    override func tearDownWithError() throws {
+        try app.autoRevert().wait()
         app.shutdown()
     }
     
@@ -58,9 +60,6 @@ final class RegisterTests: XCTestCase {
     }
     
     func testRegisterFailsWithExistingEmail() throws {
-        try app.autoMigrate().wait()
-        defer { try! app.autoRevert().wait() }
-
         app.repositories.use(.database)
         
         let user = User(fullName: "Test user 1", email: "test@test.com", passwordHash: "123")

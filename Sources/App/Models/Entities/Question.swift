@@ -49,5 +49,43 @@ final class Question: Model {
         self.answer_type = answer_type
         self.answer = answer
     }
+    
+    func check(participant_ans: String) -> AnswerVerdict {
+        let cleared_ans  = participant_ans.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: ",", with: ".").lowercased().components(separatedBy: .whitespacesAndNewlines).filter { !$0.isEmpty }.joined(separator: " ")
+        switch answer_type {
+        case .number:
+            if let p_number = Float(cleared_ans), let j_number = Float(answer) {
+                return abs(p_number - j_number) < 0.1 ? .ok : .wrong
+            }
+            return .wrong_presentation
+        case .word:
+            if cleared_ans == "" || cleared_ans.rangeOfCharacter(from: CharacterSet.lowercaseLetters.inverted) != nil {
+                return .wrong_presentation
+            }
+            return answer == cleared_ans ? .ok : .wrong
+        case .order:
+            let components = cleared_ans.components(separatedBy: .punctuationCharacters).joined(separator: " ").components(separatedBy: .whitespacesAndNewlines)
+            switch components.count {
+            case 0:
+                return .wrong_presentation
+            case 1:
+                if let compressed_order = components.first {
+                    let order_array = Array(compressed_order)
+                    if order_array.filter({ UInt(String($0)) == nil }).count > 0 {
+                        return .wrong_presentation
+                    }
+                    return order_array.map { UInt(String($0)) } == answer.components(separatedBy: .whitespacesAndNewlines).map { UInt($0) } ? .ok : .wrong
+                }
+                return .wrong_presentation
+            default:
+                return components.map { UInt(String($0)) } == answer.components(separatedBy: .whitespacesAndNewlines).map { UInt($0) } ? .ok : .wrong
+            }
+        case .pharse:
+            let pharse_cleared_text = cleared_ans.components(separatedBy: .punctuationCharacters).joined(separator: " ").components(separatedBy: .whitespacesAndNewlines).filter { !$0.isEmpty }.joined(separator: " ")
+
+            return answer == pharse_cleared_text ? .ok : .wrong
+        }
+    }
+    
 }
 

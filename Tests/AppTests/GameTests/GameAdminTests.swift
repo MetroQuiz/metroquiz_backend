@@ -42,7 +42,7 @@ final class GameAdminTests: XCTestCase {
     
     func testGameCreation() throws {
         let stations = try Station.query(on: app.db).all().wait()
-        let gameCreation = try GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
+        let gameCreation = GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
         let payload = try Payload(with: user)
         let accessToken = try app.jwt.signers.sign(payload)
         var headers = HTTPHeaders()
@@ -63,7 +63,7 @@ final class GameAdminTests: XCTestCase {
     
     func testGameView() throws {
         let stations = try Station.query(on: app.db).all().wait()
-        let gameCreation = try GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
+        let gameCreation = GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
         let payload = try Payload(with: user)
         let accessToken = try app.jwt.signers.sign(payload)
         var headers = HTTPHeaders()
@@ -78,14 +78,13 @@ final class GameAdminTests: XCTestCase {
                 XCTAssertTrue(try! NSRegularExpression(pattern: "[0-9]{8}").matches(game.pin))
                 XCTAssertEqual(game.origin_id, stations[0].id!)
                 XCTAssertEqual(game.destination_id, stations[1].id!)
-                let stations = try Station.query(on: app.db).all().wait()
                 
                 let gameUUID = GameUUID(game_id: game.id!)
                 try app.test(.GET, adminPath, headers: authHeaders, beforeRequest: { req in
                     try req.content.encode(gameUUID)
                 }, afterResponse: { res in
                     XCTAssertEqual(res.status, .ok)
-                    try XCTAssertContent(GameAdminResponse.self, res) { now_game in
+                    XCTAssertContent(GameAdminResponse.self, res) { now_game in
                         XCTAssertEqual(now_game.status, game.status)
                         XCTAssertEqual(now_game.pin, game.pin)
                         XCTAssertEqual(now_game.origin_id, game.origin_id)
@@ -100,7 +99,7 @@ final class GameAdminTests: XCTestCase {
     func testSameStation() throws {
         let station = try Station.query(on: app.db).first().wait()!
         
-        let gameCreation = try GameCreation(origin_id: station.id!, destination_id: station.id!)
+        let gameCreation = GameCreation(origin_id: station.id!, destination_id: station.id!)
         
         try app.test(.POST, adminPath, headers: authHeaders, beforeRequest: { req in
             try req.content.encode(gameCreation)
@@ -112,7 +111,7 @@ final class GameAdminTests: XCTestCase {
     
     func testSameStationEdit() throws {
         let stations = try Station.query(on: app.db).all().wait()
-        let gameCreation = try GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
+        let gameCreation = GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
         let payload = try Payload(with: user)
         let accessToken = try app.jwt.signers.sign(payload)
         var headers = HTTPHeaders()
@@ -129,7 +128,7 @@ final class GameAdminTests: XCTestCase {
                 XCTAssertEqual(game.destination_id, stations[1].id!)
                 let station = try Station.query(on: app.db).first().wait()!
                 
-                let gameEdit = try GameEdit(game_id: game.id!, origin_id: station.id!, destination_id: station.id!)
+                let gameEdit = GameEdit(game_id: game.id!, origin_id: station.id!, destination_id: station.id!)
                 
                 try app.test(.PATCH, adminPath, headers: authHeaders, beforeRequest: { req in
                     try req.content.encode(gameEdit)
@@ -144,7 +143,7 @@ final class GameAdminTests: XCTestCase {
     
     func testNonExistentStationCreation() throws {
         let stations = try Station.query(on: app.db).all().wait()
-        let gameCreation = try GameCreation(origin_id: stations[0].id!, destination_id: UUID())
+        let gameCreation = GameCreation(origin_id: stations[0].id!, destination_id: UUID())
         let payload = try Payload(with: user)
         let accessToken = try app.jwt.signers.sign(payload)
         var headers = HTTPHeaders()
@@ -158,7 +157,7 @@ final class GameAdminTests: XCTestCase {
     
     func testNonExistentStationEdit() throws {
         let stations = try Station.query(on: app.db).all().wait()
-        let gameCreation = try GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
+        let gameCreation = GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
         let payload = try Payload(with: user)
         let accessToken = try app.jwt.signers.sign(payload)
         var headers = HTTPHeaders()
@@ -175,7 +174,7 @@ final class GameAdminTests: XCTestCase {
                 XCTAssertEqual(game.destination_id, stations[1].id!)
                 let station = try Station.query(on: app.db).first().wait()!
                 
-                let gameEdit = try GameEdit(game_id: game.id!, origin_id: station.id!, destination_id: UUID())
+                let gameEdit = GameEdit(game_id: game.id!, origin_id: station.id!, destination_id: UUID())
                 
                 try app.test(.PATCH, adminPath, headers: authHeaders, beforeRequest: { req in
                     try req.content.encode(gameEdit)
@@ -190,7 +189,7 @@ final class GameAdminTests: XCTestCase {
     
     func testIlligal() throws {
         let stations = try Station.query(on: app.db).all().wait()
-        let gameCreation = try GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
+        let gameCreation = GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
         let payload = try Payload(with: user)
         let accessToken = try app.jwt.signers.sign(payload)
         var headers = HTTPHeaders()
@@ -217,7 +216,7 @@ final class GameAdminTests: XCTestCase {
                     
                 })
                 
-                let gameEdit = try GameEdit(game_id: game.id!, origin_id: stations[1].id!, destination_id: stations[0].id!)
+                let gameEdit = GameEdit(game_id: game.id!, origin_id: stations[1].id!, destination_id: stations[0].id!)
                 
                 try app.test(.PATCH, adminPath, headers: self.getHeadersByUser(hacker), beforeRequest: { req in
                     try req.content.encode(gameEdit)
@@ -240,7 +239,7 @@ final class GameAdminTests: XCTestCase {
     
     func testToggle() throws {
         let stations = try Station.query(on: app.db).all().wait()
-        let gameCreation = try GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
+        let gameCreation = GameCreation(origin_id: stations[0].id!, destination_id: stations[1].id!)
         let payload = try Payload(with: user)
         let accessToken = try app.jwt.signers.sign(payload)
         var headers = HTTPHeaders()
@@ -279,7 +278,7 @@ final class GameAdminTests: XCTestCase {
                                             try req.content.encode(gameUUID)
                                         }, afterResponse: { res in
                                             XCTAssertEqual(res.status, .ok)
-                                            try XCTAssertContent(GameStatusResponse.self, res) { gameStatus in
+                                            XCTAssertContent(GameStatusResponse.self, res) { gameStatus in
                                                 XCTAssertEqual(gameStatus.status, .in_process)
                                             }
                                         })

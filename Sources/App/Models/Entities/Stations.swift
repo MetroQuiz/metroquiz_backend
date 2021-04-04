@@ -48,6 +48,15 @@ final class Stage: Model {
 final class Station: Model {
     static let schema = "stations"
     
+    struct StationResponse : Content {
+        let name: String
+        let id: UUID
+        init(name: String, id: UUID) {
+            self.name = name
+            self.id = id
+        }
+    }
+    
     @ID(key: .id)
     var id: UUID?
     

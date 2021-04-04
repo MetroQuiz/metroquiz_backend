@@ -6,5 +6,6 @@ func routes(_ app: Application) throws {
         // Authentication
         try! api.register(collection: AuthenticationController())
         try! api.register(collection: GameAdminController())
+        try! api.register(collection: GameParticipantController())
     }
 }

@@ -10,13 +10,21 @@ enum GameStatus: String, Codable, Content {
 }
 
 
+enum AnswerVerdict: String, Codable, Content {
+    case ok
+    case wrong_presentation
+    case wrong
+    case no
+}
+
 enum AvailabilityLevel: String, Codable {
     case passed
+    case in_process
     case available
 }
 
 
-final class Participant: Model {
+final class Participant: Model, Authenticatable {
     static let schema = "participants"
     
     @ID(key: .id)
@@ -25,29 +33,37 @@ final class Participant: Model {
     @Field(key: "token")
     var token: String
     
+    @Field(key: "name")
+    var name: String
+    
     @Field(key: "tickets")
-    var tickets: UInt
+    var tickets: Int
     
     @Field(key: "score")
-    var score: UInt
+    var score: Int
     
     @Field(key: "train_fullness")
-    var train_fullness: UInt
+    var train_fullness: Int
     
     @Parent(key: "game_id")
     var game: Game
     
     init() {}
     
-    init(id : UUID? = nil, token: String, tickets: UInt, score: UInt, train_fullness: UInt, game_id: UUID) {
+    init(id : UUID? = nil, name: String, token: String = Participant.generateToken(), tickets: Int, score: Int, train_fullness: Int, game_id: UUID) {
         self.id = id
         self.token = token
+        self.name = name
         self.tickets = tickets
         self.score = score
         self.train_fullness = train_fullness
         self.$game.id = game_id
     }
     
+    static func generateToken() -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<8).map{ _ in letters.randomElement()! })
+    }
 }
 
 
@@ -60,8 +76,8 @@ final class Answer: Model {
     @Field(key: "text")
     var text: String
     
-    @Field(key: "is_correct")
-    var is_correct: Bool?
+    @Enum(key: "verdict")
+    var verdict: AnswerVerdict
     
     @Parent(key: "question_id")
     var question: Question
@@ -74,9 +90,9 @@ final class Answer: Model {
     
     init() {}
     
-    init(id: UUID? = nil, is_correct: Bool? = nil, submited_at: Date? = nil, text: String, author_id: UUID, question_id: UUID) {
+    init(id: UUID? = nil, verdict: AnswerVerdict? = nil, submited_at: Date? = nil, text: String, author_id: UUID, question_id: UUID) {
         self.id = id
-        self.is_correct = is_correct
+        self.verdict = verdict ?? .no
         self.submited_at = submited_at
         self.$author.id = author_id
         self.$question.id = question_id
@@ -99,6 +115,8 @@ final class StationAvailability: Model {
     @Enum(key: "level")
     var level: AvailabilityLevel
     
+    @Field(key: "start_answer")
+    var start_answer_at: Date?
     
     init() {}
     
@@ -118,17 +136,21 @@ final class GameQuestion: Model {
     @ID(key: .id)
     var id: UUID?
     
+    @Parent(key: "station_id")
+    var station: Station
+    
     @Parent(key: "question_id")
     var question: Question
-    
+
     @Parent(key: "game_id")
     var game: Game
     
     
     init() {}
     
-    init(id: UUID? = nil, question_id: UUID, game_id: UUID) {
+    init(id: UUID? = nil, station_id: UUID, question_id: UUID, game_id: UUID) {
         self.id = id
+        self.$station.id = station_id
         self.$question.id = question_id
         self.$game.id = game_id
     }
@@ -157,8 +179,11 @@ final class Game: Model {
     @Enum(key: "state")
     var status: GameStatus
     
-    @Siblings(through: GameQuestion.self, from: \.$game, to: \.$question)
-    var questions: [Question]
+    @Timestamp(key: "create_at", on: .create)
+    var create_at: Date?
+    
+    @Siblings(through: GameQuestion.self, from: \.$game, to: \.$station)
+    var questions: [Station]
     
     init() {}
     
@@ -179,16 +204,25 @@ final class Game: Model {
         return result
     }
     
-    static func fromGameCreation(from gameCreation: GameCreation, author_id: UUID, db: Database) -> EventLoopFuture<Game> {
+    static func fromGameCreation(from gameCreation: GameCreation, author_id: UUID, req: Request) -> EventLoopFuture<Game> {
         let newGame = Game(author_id: author_id, pin: Game.generatePin(), origin_id: gameCreation.origin_id, destination_id: gameCreation.destination_id, status: .preparing)
-        return newGame.save(on: db).flatMap { _ in
-            return Question.query(on: db).with(\.$station).all().flatMap { questions -> EventLoopFuture<Void> in
-                var result = [UUID?: Question]()
+        return newGame.save(on: req.db).flatMap { _ in
+            return Question.query(on: req.db).with(\.$station).all().flatMap { questions -> EventLoopFuture<Void> in
+                var result = [UUID: UUID]()
                 
                 for question in questions.shuffled() {
-                    result[question.station.id] = question
+                    if let station_id = question.station.id, let question_id = question.id {
+                        result[station_id] = question_id
+                    }
                 }
-                return newGame.$questions.attach(Array(result.values), on: db)
+                return result.map { (station_id, question_id) in
+                    if let game_id = newGame.id {
+                        return GameQuestion(station_id: station_id, question_id: question_id, game_id: game_id).save(on: req.db)
+                    }
+                    else {
+                        return req.eventLoop.makeFailedFuture(Abort(.conflict))
+                    }
+                }.flatten(on: req.eventLoop)
             }.map {
                 newGame
             }
