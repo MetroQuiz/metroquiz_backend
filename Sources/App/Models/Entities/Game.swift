@@ -19,6 +19,7 @@ enum AnswerVerdict: String, Codable, Content {
 
 enum AvailabilityLevel: String, Codable {
     case passed
+    case in_process
     case available
 }
 
@@ -32,23 +33,27 @@ final class Participant: Model, Authenticatable {
     @Field(key: "token")
     var token: String
     
+    @Field(key: "name")
+    var name: String
+    
     @Field(key: "tickets")
-    var tickets: UInt
+    var tickets: Int
     
     @Field(key: "score")
-    var score: UInt
+    var score: Int
     
     @Field(key: "train_fullness")
-    var train_fullness: UInt
+    var train_fullness: Int
     
     @Parent(key: "game_id")
     var game: Game
     
     init() {}
     
-    init(id : UUID? = nil, token: String = Participant.generateToken(), tickets: UInt, score: UInt, train_fullness: UInt, game_id: UUID) {
+    init(id : UUID? = nil, name: String, token: String = Participant.generateToken(), tickets: Int, score: Int, train_fullness: Int, game_id: UUID) {
         self.id = id
         self.token = token
+        self.name = name
         self.tickets = tickets
         self.score = score
         self.train_fullness = train_fullness
@@ -110,6 +115,8 @@ final class StationAvailability: Model {
     @Enum(key: "level")
     var level: AvailabilityLevel
     
+    @Field(key: "start_answer")
+    var start_answer_at: Date?
     
     init() {}
     
@@ -172,8 +179,11 @@ final class Game: Model {
     @Enum(key: "state")
     var status: GameStatus
     
-    @Siblings(through: GameQuestion.self, from: \.$game, to: \.$question)
-    var questions: [Question]
+    @Timestamp(key: "create_at", on: .create)
+    var create_at: Date?
+    
+    @Siblings(through: GameQuestion.self, from: \.$game, to: \.$station)
+    var questions: [Station]
     
     init() {}
     
