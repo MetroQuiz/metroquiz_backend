@@ -145,7 +145,7 @@ struct GameAdminController: RouteCollection {
                 return req.eventLoop.makeFailedFuture(Abort(.internalServerError))
             case .preparing:
                 game.status = .lobby
-                req.application.gameWScontrollers[game_id] = GameWebSocketControoler(.lobby,  req.application.eventLoopGroup.next())
+                req.application.gameWScontrollers[game_id] = GameWebSocketControoler(.lobby,  req.application.eventLoopGroup.next(), req.db)
                 return game.update(on: req.db).map { _ in
                     GameStatusResponse(status: GameStatus.lobby)
                 }

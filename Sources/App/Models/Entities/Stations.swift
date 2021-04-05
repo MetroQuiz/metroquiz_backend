@@ -56,6 +56,14 @@ final class Station: Model {
             self.id = id
         }
     }
+    struct StationSVGResponse : Content {
+        let svg_id: String
+        let id: UUID
+        init(svg_id: String, id: UUID) {
+            self.svg_id = svg_id
+            self.id = id
+        }
+    }
     
     @ID(key: .id)
     var id: UUID?

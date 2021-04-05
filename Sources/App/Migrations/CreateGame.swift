@@ -38,8 +38,8 @@ struct CreateGame: Migration {
                         .id()
                         .field("text", .string, .required)
                         .field("verdict", answerVerdict)
-                        .field("author_id", .uuid, .required, .references("users", "id", onDelete: .cascade))
-                        .field("game_id", .uuid, .required, .references("games", "id", onDelete: .cascade))
+                        .field("author_id", .uuid, .required, .references("participants", "id", onDelete: .cascade))
+                        .field("question_id", .uuid, .required, .references("questions", "id", onDelete: .cascade))
                         .field("submited_at", .date)
                     .create()},
                     database.enum("availability_level").case("in_process").case("passed").case("available").create().flatMap { availability_level in

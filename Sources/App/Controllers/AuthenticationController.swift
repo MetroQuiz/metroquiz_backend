@@ -33,7 +33,6 @@ struct AuthenticationController: RouteCollection {
         guard registerRequest.password == registerRequest.confirmPassword else {
             throw AuthenticationError.passwordsDontMatch
         }
-        
         return req.password
             .async
             .hash(registerRequest.password)

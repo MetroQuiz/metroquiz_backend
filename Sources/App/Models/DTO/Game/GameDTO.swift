@@ -93,14 +93,12 @@ struct AnswerResponse: Content {
     let score: Int
     let tickets: Int
     let train_fullness: Int
-    let new_stations: [UUID]
     
-    init(verdict: AnswerVerdict, score: Int, tickets: Int, train_fullness: Int, new_stations: [UUID]) {
+    init(verdict: AnswerVerdict, score: Int, tickets: Int, train_fullness: Int) {
         self.verdict = verdict
         self.score = score
         self.tickets = tickets
         self.train_fullness = train_fullness
-        self.new_stations = new_stations
     }
 }
 
@@ -110,5 +108,30 @@ struct AnswerRequest: Content {
     
     init(text: String) {
         self.text = text
+    }
+}
+
+
+struct GameInfoResponse: Content {
+    let stations: [Station.StationSVGResponse]
+    let score: Int
+    let tickets: Int
+    let train_fullness: Int
+    init(stations: [Station.StationSVGResponse], score: Int, tickets: Int, train_fullness: Int) {
+        self.stations = stations
+        self.score = score
+        self.tickets = tickets
+        self.train_fullness = train_fullness
+    }
+}
+
+
+struct ResultResponse: Content {
+    let results: [String: Int]
+    let name: String
+    
+    init(results: [String: Int], name: String) {
+        self.results = results
+        self.name = name
     }
 }

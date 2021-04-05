@@ -26,3 +26,4 @@ struct EnterRespnose : Content {
         self.token = token
     }
 }
+

@@ -51,9 +51,10 @@ public func configure(_ app: Application) throws {
     // MARK: Game controller
     
     app.commands.use(IncludeMap(), as: "include_map")
+    app.commands.use(AddRandomQuestions(), as: "random")
+    try migrations(app)
     try loadGames(app)
     try routes(app)
-    try migrations(app)
     try queues(app)
     try services(app)
     
@@ -71,7 +72,7 @@ public func configure(_ app: Application) throws {
                     }
                 }
                 else {
-                    ws.send("{\"error:\" true, \"message\": \"Auth failed\"}")
+                    ws.send("{\"error\": true, \"message\": \"Auth failed\"}")
                     ws.close()
                 }
             }

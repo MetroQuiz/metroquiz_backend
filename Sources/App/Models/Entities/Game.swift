@@ -92,6 +92,7 @@ final class Answer: Model {
     
     init(id: UUID? = nil, verdict: AnswerVerdict? = nil, submited_at: Date? = nil, text: String, author_id: UUID, question_id: UUID) {
         self.id = id
+        self.text = text
         self.verdict = verdict ?? .no
         self.submited_at = submited_at
         self.$author.id = author_id
