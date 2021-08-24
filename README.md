@@ -35,5 +35,8 @@ To be aware of game state connect websocket on route `/ws`, after connection it 
 ### Jobs
 For scheduled jobs metriquiz uses Redis server, it should be configured in .env file. Particularly jobs used for countdown for a question answering
 
+### Deploy
+Server can be deployed using **docker compose**, it contains postgresql db, redis and swift5 inside
+
 ### Game rules and front-end
 To read more metroquiz visit front-end repo https://github.com/MetroQuiz/metroquiz_frontend
