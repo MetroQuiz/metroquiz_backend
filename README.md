@@ -1,3 +1,4 @@
+<img src="https://img.shields.io/badge/swift-5.2-brightgreen.svg" alt="Swift 5.2"> <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/cssutils">
 # Metroquiz backend
 Backed written for metroqiuz website (https://github.com/MetroQuiz/metroquiz_frontend)
 ### Routes
@@ -34,6 +35,14 @@ To be aware of game state connect websocket on route `/ws`, after connection it 
 
 ### Jobs
 For scheduled jobs metriquiz uses Redis server, it should be configured in .env file. Particularly jobs used for countdown for a question answering
+
+### Commands
+Server has two commands:
+1. random -- generate random question for all stations to test server
+2. include_map JSON_MAP_FILE -- delete previous map and generate new one from json file
+
+To convert official [SVG map](https://www.mosmetro.ru/metro-map/) into our format use *map_parsing/parse_html.py* script, it will take **index.html** and generate from it map.json file
+
 
 ### Deploy
 Server can be deployed using **docker compose**, it contains postgresql db, redis and swift5 inside
